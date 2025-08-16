@@ -7,7 +7,11 @@ import { Label } from './ui/label';
 import { Textarea } from './ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Badge } from './ui/badge';
-import { commonIssues, supportedBrands, submitRepairRequest } from '../data/mock';
+import { commonIssues, supportedBrands } from '../data/mock';
+import axios from 'axios';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 const RepairRequestForm = () => {
   const [formData, setFormData] = useState({
@@ -25,6 +29,7 @@ const RepairRequestForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [requestId, setRequestId] = useState('');
+  const [error, setError] = useState('');
 
   const handleInputChange = (name, value) => {
     setFormData(prev => ({
@@ -36,15 +41,20 @@ const RepairRequestForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError('');
     
     try {
-      const response = await submitRepairRequest(formData);
-      if (response.success) {
+      const response = await axios.post(`${API}/repair-requests`, formData);
+      
+      if (response.data.success) {
         setIsSubmitted(true);
-        setRequestId(response.requestId);
+        setRequestId(response.data.request_id);
+      } else {
+        setError('Failed to submit repair request. Please try again.');
       }
     } catch (error) {
-      console.error('Error submitting form:', error);
+      console.error('Error submitting repair request:', error);
+      setError(error.response?.data?.detail || 'Failed to submit repair request. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -75,8 +85,28 @@ const RepairRequestForm = () => {
                     <li>• Our technician will call you to confirm details</li>
                     <li>• We'll schedule a convenient service time</li>
                     <li>• Professional diagnosis and repair</li>
+                    <li>• Email confirmation has been sent to Print Complex</li>
                   </ul>
                 </div>
+                <Button 
+                  onClick={() => {
+                    setIsSubmitted(false);
+                    setFormData({
+                      name: '',
+                      email: '',
+                      phone: '',
+                      company: '',
+                      equipmentBrand: '',
+                      equipmentModel: '',
+                      issue: '',
+                      description: '',
+                      urgency: 'medium'
+                    });
+                  }}
+                  className="mt-6 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white"
+                >
+                  Submit Another Request
+                </Button>
               </CardContent>
             </Card>
           </div>
@@ -149,6 +179,12 @@ const RepairRequestForm = () => {
                 <CardDescription>Please provide details about your equipment and the issue you're experiencing</CardDescription>
               </CardHeader>
               <CardContent>
+                {error && (
+                  <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                    <p className="text-red-800 text-sm">{error}</p>
+                  </div>
+                )}
+                
                 <form onSubmit={handleSubmit} className="space-y-6">
                   {/* Personal Information */}
                   <div className="grid md:grid-cols-2 gap-4">
@@ -244,7 +280,7 @@ const RepairRequestForm = () => {
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="urgency">Service Urgency</Label>
-                      <Select onValueChange={(value) => handleInputChange('urgency', value)}>
+                      <Select onValueChange={(value) => handleInputChange('urgency', value)} defaultValue="medium">
                         <SelectTrigger>
                           <SelectValue placeholder="Select urgency level" />
                         </SelectTrigger>
