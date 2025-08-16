@@ -59,11 +59,11 @@ This document defines the API contracts for the Print Complex website backend in
 ### Environment Variables
 ```
 # Backend .env
-EMAIL_HOST=smtp-mail.outlook.com
+EMAIL_HOST=smtp.gmail.com
 EMAIL_PORT=587
-EMAIL_USER=9104297686@outlook.com  
+EMAIL_USER=angusyoung1794@gmail.com  
 EMAIL_PASSWORD=ifgeqscUC13579
-EMAIL_FROM=9104297686@outlook.com
+EMAIL_FROM=angusyoung1794@gmail.com
 EMAIL_TO=9104297686@outlook.com
 ```
 
