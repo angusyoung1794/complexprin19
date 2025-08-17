@@ -86,15 +86,15 @@ class EmailService {
     } catch (error) {
       console.error('EmailJS Error:', error);
       
-      // Provide user-friendly error messages
-      let errorMessage = 'Failed to submit repair request. Please try again.';
+      // Provide user-friendly error messages in Russian
+      let errorMessage = 'Не удалось отправить заявку на ремонт. Пожалуйста, попробуйте еще раз.';
       
       if (error.status === 400) {
-        errorMessage = 'Please check all required fields and try again.';
+        errorMessage = 'Пожалуйста, проверьте все обязательные поля и попробуйте еще раз.';
       } else if (error.status === 403) {
-        errorMessage = 'Service temporarily unavailable. Please call us directly.';
+        errorMessage = 'Сервис временно недоступен. Пожалуйста, позвоните нам напрямую.';
       } else if (error.text) {
-        errorMessage = `Error: ${error.text}`;
+        errorMessage = `Ошибка: ${error.text}`;
       }
 
       throw new Error(errorMessage);
