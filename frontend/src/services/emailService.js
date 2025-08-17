@@ -79,7 +79,7 @@ class EmailService {
 
       return {
         success: true,
-        message: 'Your repair request has been submitted successfully. We will contact you within 24 hours.',
+        message: 'Ваша заявка на ремонт была успешно отправлена. Мы свяжемся с вами в течение 24 часов.',
         request_id: emailParams.requestId
       };
 
