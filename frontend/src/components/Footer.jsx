@@ -22,11 +22,11 @@ const Footer = () => {
               </div>
               <div>
                 <h3 className="text-xl font-bold">{companyInfo.name}</h3>
-                <p className="text-gray-400 text-sm">Professional Equipment Service</p>
+                <p className="text-gray-400 text-sm">Профессиональное обслуживание оборудования</p>
               </div>
             </div>
             <p className="text-gray-300 mb-6 max-w-md">
-              {companyInfo.description} Trust our experienced technicians to keep your printing equipment running smoothly.
+              {companyInfo.description} Доверьтесь нашим опытным техникам, чтобы ваше печатное оборудование работало бесперебойно.
             </p>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
@@ -46,67 +46,67 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <h4 className="text-lg font-semibold mb-4">Быстрые ссылки</h4>
             <nav className="space-y-2">
               <button 
                 onClick={() => scrollToSection('home')}
                 className="block text-gray-300 hover:text-pink-400 transition-colors duration-200"
               >
-                Home
+                Главная
               </button>
               <button 
                 onClick={() => scrollToSection('services')}
                 className="block text-gray-300 hover:text-pink-400 transition-colors duration-200"
               >
-                Services
+                Услуги
               </button>
               <button 
                 onClick={() => scrollToSection('equipment')}
                 className="block text-gray-300 hover:text-pink-400 transition-colors duration-200"
               >
-                Equipment
+                Оборудование
               </button>
               <button 
                 onClick={() => scrollToSection('about')}
                 className="block text-gray-300 hover:text-pink-400 transition-colors duration-200"
               >
-                About
+                О нас
               </button>
               <button 
                 onClick={() => scrollToSection('repair-request')}
                 className="block text-gray-300 hover:text-pink-400 transition-colors duration-200"
               >
-                Request Repair
+                Заявка на ремонт
               </button>
             </nav>
           </div>
 
           {/* Business Hours */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Business Hours</h4>
+            <h4 className="text-lg font-semibold mb-4">Рабочие часы</h4>
             <div className="space-y-2">
               <div className="flex items-center space-x-2">
                 <Clock className="w-4 h-4 text-pink-400" />
-                <span className="text-gray-300 text-sm">Monday - Friday</span>
+                <span className="text-gray-300 text-sm">Понедельник - Пятница</span>
               </div>
-              <p className="text-gray-400 text-sm ml-6">9:00 AM - 6:00 PM</p>
+              <p className="text-gray-400 text-sm ml-6">9:00 - 18:00</p>
               
               <div className="flex items-center space-x-2 mt-3">
                 <Clock className="w-4 h-4 text-pink-400" />
-                <span className="text-gray-300 text-sm">Saturday</span>
+                <span className="text-gray-300 text-sm">Суббота</span>
               </div>
-              <p className="text-gray-400 text-sm ml-6">10:00 AM - 4:00 PM</p>
+              <p className="text-gray-400 text-sm ml-6">10:00 - 16:00</p>
               
               <div className="flex items-center space-x-2 mt-3">
                 <Clock className="w-4 h-4 text-pink-400" />
-                <span className="text-gray-300 text-sm">Sunday</span>
+                <span className="text-gray-300 text-sm">Воскресенье</span>
               </div>
-              <p className="text-gray-400 text-sm ml-6">Emergency Only</p>
+              <p className="text-gray-400 text-sm ml-6">Только экстренные случаи</p>
             </div>
             
             <div className="mt-6 p-4 bg-gradient-to-br from-pink-900/20 to-purple-900/20 rounded-lg border border-pink-500/20">
-              <p className="text-pink-200 text-sm font-medium">24/7 Emergency Support</p>
-              <p className="text-gray-400 text-xs mt-1">Available for urgent repairs</p>
+              <p className="text-pink-200 text-sm font-medium">Экстренная поддержка 24/7</p>
+              <p className="text-gray-400 text-xs mt-1">Доступна для срочного ремонта</p>
             </div>
           </div>
         </div>
@@ -115,12 +115,12 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
-              © 2025 {companyInfo.name}. All rights reserved.
+              © 2025 {companyInfo.name}. Все права защищены.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <span className="text-gray-400 text-sm">Privacy Policy</span>
-              <span className="text-gray-400 text-sm">Terms of Service</span>
-              <span className="text-gray-400 text-sm">Contact Us</span>
+              <span className="text-gray-400 text-sm">Политика конфиденциальности</span>
+              <span className="text-gray-400 text-sm">Условия обслуживания</span>
+              <span className="text-gray-400 text-sm">Свяжитесь с нами</span>
             </div>
           </div>
         </div>

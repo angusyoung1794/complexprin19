@@ -39,7 +39,7 @@ const RepairRequestForm = () => {
     const required = ['name', 'email', 'phone', 'equipmentBrand', 'issue'];
     for (let field of required) {
       if (!formData[field] || formData[field].trim() === '') {
-        setError(`Please fill in the ${field.replace(/([A-Z])/g, ' $1').toLowerCase()} field.`);
+        setError(`Пожалуйста, заполните поле "${field.replace(/([A-Z])/g, ' $1').toLowerCase()}".`);
         return false;
       }
     }
@@ -47,7 +47,7 @@ const RepairRequestForm = () => {
     // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
-      setError('Please enter a valid email address.');
+      setError('Пожалуйста, введите корректный email адрес.');
       return false;
     }
 
@@ -71,11 +71,11 @@ const RepairRequestForm = () => {
         setIsSubmitted(true);
         setRequestId(response.request_id);
       } else {
-        setError('Failed to submit repair request. Please try again.');
+        setError('Не удалось отправить заявку на ремонт. Пожалуйста, попробуйте еще раз.');
       }
     } catch (error) {
       console.error('Error submitting repair request:', error);
-      setError(error.message || 'Failed to submit repair request. Please try again.');
+      setError(error.message || 'Не удалось отправить заявку на ремонт. Пожалуйста, попробуйте еще раз.');
     } finally {
       setIsSubmitting(false);
     }
@@ -91,22 +91,22 @@ const RepairRequestForm = () => {
                 <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
                   <CheckCircle className="w-10 h-10 text-white" />
                 </div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">Request Submitted Successfully!</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">Заявка успешно отправлена!</h2>
                 <p className="text-lg text-gray-600 mb-6">
-                  Thank you for your repair request. We will contact you within 24 hours to schedule your service.
+                  Спасибо за вашу заявку на ремонт. Мы свяжемся с вами в течение 24 часов для назначения обслуживания.
                 </p>
                 <Badge className="bg-green-100 text-green-700 text-lg px-4 py-2">
-                  Request ID: {requestId}
+                  ID заявки: {requestId}
                 </Badge>
                 <div className="mt-8 p-4 bg-gray-50 rounded-lg">
                   <p className="text-gray-700 mb-2">
-                    <strong>Next Steps:</strong>
+                    <strong>Следующие шаги:</strong>
                   </p>
                   <ul className="text-left text-gray-600 space-y-1">
-                    <li>• Our technician will call you to confirm details</li>
-                    <li>• We'll schedule a convenient service time</li>
-                    <li>• Professional diagnosis and repair</li>
-                    <li>• Email notification sent to Print Complex team</li>
+                    <li>• Наш техник свяжется с вами для подтверждения деталей</li>
+                    <li>• Мы запланируем удобное время обслуживания</li>
+                    <li>• Профессиональная диагностика и ремонт</li>
+                    <li>• Уведомление по электронной почте отправлено команде Print Complex</li>
                   </ul>
                 </div>
                 <Button 
@@ -126,7 +126,7 @@ const RepairRequestForm = () => {
                   }}
                   className="mt-6 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white"
                 >
-                  Submit Another Request
+                  Отправить другую заявку
                 </Button>
               </CardContent>
             </Card>
@@ -141,16 +141,16 @@ const RepairRequestForm = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <Badge className="mb-4 bg-pink-100 text-pink-700 hover:bg-pink-200">
-            Get Help Now
+            Получить помощь сейчас
           </Badge>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Request Equipment
+            Заявка на ремонт
             <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent block lg:inline lg:ml-4">
-              Repair Service
+              оборудования
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Fill out the form below and our expert technicians will contact you within 24 hours to schedule your repair service.
+            Заполните форму ниже, и наши опытные техники свяжутся с вами в течение 24 часов для назначения услуги ремонта.
           </p>
         </div>
 
@@ -159,14 +159,14 @@ const RepairRequestForm = () => {
           <div className="lg:col-span-1">
             <Card className="shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl text-gray-900">Contact Information</CardTitle>
-                <CardDescription>Get in touch with our support team</CardDescription>
+                <CardTitle className="text-2xl text-gray-900">Контактная информация</CardTitle>
+                <CardDescription>Свяжитесь с нашей службой поддержки</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-pink-500" />
                   <div>
-                    <p className="font-semibold text-gray-900">Phone</p>
+                    <p className="font-semibold text-gray-900">Телефон</p>
                     <p className="text-gray-600">+79104297686</p>
                   </div>
                 </div>
@@ -180,13 +180,13 @@ const RepairRequestForm = () => {
                 <div className="flex items-center space-x-3">
                   <MapPin className="w-5 h-5 text-pink-500" />
                   <div>
-                    <p className="font-semibold text-gray-900">Address</p>
-                    <p className="text-gray-600">Abramtsevskaya str., 2</p>
+                    <p className="font-semibold text-gray-900">Адрес</p>
+                    <p className="text-gray-600">ул. Абрамцевская, 2</p>
                   </div>
                 </div>
                 <div className="p-4 bg-gradient-to-br from-pink-50 to-purple-50 rounded-lg">
-                  <h4 className="font-semibold text-gray-900 mb-2">Quick Response Guarantee</h4>
-                  <p className="text-gray-600 text-sm">We respond to all repair requests within 24 hours and provide flexible scheduling to match your business hours.</p>
+                  <h4 className="font-semibold text-gray-900 mb-2">Гарантия быстрого ответа</h4>
+                  <p className="text-gray-600 text-sm">Мы отвечаем на все заявки о ремонте в течение 24 часов и предоставляем гибкое планирование, соответствующее вашим рабочим часам.</p>
                 </div>
               </CardContent>
             </Card>
@@ -196,8 +196,8 @@ const RepairRequestForm = () => {
           <div className="lg:col-span-2">
             <Card className="shadow-2xl">
               <CardHeader>
-                <CardTitle className="text-2xl text-gray-900">Repair Request Form</CardTitle>
-                <CardDescription>Please provide details about your equipment and the issue you're experiencing</CardDescription>
+                <CardTitle className="text-2xl text-gray-900">Форма заявки на ремонт</CardTitle>
+                <CardDescription>Пожалуйста, предоставьте подробную информацию о вашем оборудовании и проблеме, с которой вы столкнулись</CardDescription>
               </CardHeader>
               <CardContent>
                 {error && (
@@ -210,23 +210,23 @@ const RepairRequestForm = () => {
                   {/* Personal Information */}
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="name">Full Name *</Label>
+                      <Label htmlFor="name">Полное имя *</Label>
                       <Input
                         id="name"
                         value={formData.name}
                         onChange={(e) => handleInputChange('name', e.target.value)}
-                        placeholder="Enter your full name"
+                        placeholder="Введите ваше полное имя"
                         required
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="email">Email Address *</Label>
+                      <Label htmlFor="email">Email адрес *</Label>
                       <Input
                         id="email"
                         type="email"
                         value={formData.email}
                         onChange={(e) => handleInputChange('email', e.target.value)}
-                        placeholder="Enter your email"
+                        placeholder="Введите ваш email"
                         required
                       />
                     </div>
@@ -234,22 +234,22 @@ const RepairRequestForm = () => {
 
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="phone">Phone Number *</Label>
+                      <Label htmlFor="phone">Номер телефона *</Label>
                       <Input
                         id="phone"
                         value={formData.phone}
                         onChange={(e) => handleInputChange('phone', e.target.value)}
-                        placeholder="Enter your phone number"
+                        placeholder="Введите ваш номер телефона"
                         required
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="company">Company Name</Label>
+                      <Label htmlFor="company">Название компании</Label>
                       <Input
                         id="company"
                         value={formData.company}
                         onChange={(e) => handleInputChange('company', e.target.value)}
-                        placeholder="Enter company name (optional)"
+                        placeholder="Введите название компании (необязательно)"
                       />
                     </div>
                   </div>
@@ -257,10 +257,10 @@ const RepairRequestForm = () => {
                   {/* Equipment Information */}
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="equipmentBrand">Equipment Brand *</Label>
+                      <Label htmlFor="equipmentBrand">Бренд оборудования *</Label>
                       <Select onValueChange={(value) => handleInputChange('equipmentBrand', value)}>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select equipment brand" />
+                          <SelectValue placeholder="Выберите бренд оборудования" />
                         </SelectTrigger>
                         <SelectContent>
                           {supportedBrands.map((brand, index) => (
@@ -272,12 +272,12 @@ const RepairRequestForm = () => {
                       </Select>
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="equipmentModel">Equipment Model</Label>
+                      <Label htmlFor="equipmentModel">Модель оборудования</Label>
                       <Input
                         id="equipmentModel"
                         value={formData.equipmentModel}
                         onChange={(e) => handleInputChange('equipmentModel', e.target.value)}
-                        placeholder="Enter model number"
+                        placeholder="Введите номер модели"
                       />
                     </div>
                   </div>
@@ -285,10 +285,10 @@ const RepairRequestForm = () => {
                   {/* Issue Information */}
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="issue">Type of Issue *</Label>
+                      <Label htmlFor="issue">Тип проблемы *</Label>
                       <Select onValueChange={(value) => handleInputChange('issue', value)}>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select the issue type" />
+                          <SelectValue placeholder="Выберите тип проблемы" />
                         </SelectTrigger>
                         <SelectContent>
                           {commonIssues.map((issue) => (
@@ -300,27 +300,27 @@ const RepairRequestForm = () => {
                       </Select>
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="urgency">Service Urgency</Label>
+                      <Label htmlFor="urgency">Срочность обслуживания</Label>
                       <Select onValueChange={(value) => handleInputChange('urgency', value)} defaultValue="medium">
                         <SelectTrigger>
-                          <SelectValue placeholder="Select urgency level" />
+                          <SelectValue placeholder="Выберите уровень срочности" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="low">Standard (3-5 days)</SelectItem>
-                          <SelectItem value="medium">Priority (1-2 days)</SelectItem>
-                          <SelectItem value="high">Urgent (Same day)</SelectItem>
+                          <SelectItem value="low">Стандартно (3-5 дней)</SelectItem>
+                          <SelectItem value="medium">Приоритет (1-2 дня)</SelectItem>
+                          <SelectItem value="high">Срочно (в тот же день)</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="description">Issue Description</Label>
+                    <Label htmlFor="description">Описание проблемы</Label>
                     <Textarea
                       id="description"
                       value={formData.description}
                       onChange={(e) => handleInputChange('description', e.target.value)}
-                      placeholder="Please describe the issue in detail, including any error messages or codes"
+                      placeholder="Пожалуйста, подробно опишите проблему, включая любые сообщения об ошибках или коды"
                       rows={4}
                     />
                   </div>
@@ -333,11 +333,11 @@ const RepairRequestForm = () => {
                     {isSubmitting ? (
                       <span className="flex items-center justify-center">
                         <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                        Submitting...
+                        Отправка...
                       </span>
                     ) : (
                       <span className="flex items-center justify-center">
-                        Submit Repair Request
+                        Отправить заявку на ремонт
                         <Send className="ml-2 w-5 h-5" />
                       </span>
                     )}
