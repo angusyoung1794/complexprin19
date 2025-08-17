@@ -9,16 +9,16 @@ const EquipmentSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <Badge className="mb-4 bg-purple-100 text-purple-700 hover:bg-purple-200">
-            Equipment We Service
+            Оборудование, которое мы обслуживаем
           </Badge>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Professional Service for
+            Профессиональное обслуживание
             <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent block lg:inline lg:ml-4">
-              All Major Brands
+              всех ведущих брендов
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            We specialize in servicing laser printers and plotters from all major manufacturers. Our experienced technicians are certified to work on equipment from leading brands.
+            Мы специализируемся на обслуживании лазерных принтеров и плоттеров от всех основных производителей. Наши опытные техники имеют сертификаты для работы с оборудованием ведущих брендов.
           </p>
         </div>
 
@@ -51,7 +51,7 @@ const EquipmentSection = () => {
 
         {/* Supported Brands */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Supported Brands</h3>
+          <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Поддерживаемые бренды</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {supportedBrands.map((brand, index) => (
               <div key={index} className="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
@@ -66,7 +66,7 @@ const EquipmentSection = () => {
 
         {/* Equipment Types */}
         <div className="text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-8">Equipment Types We Service</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-8">Типы оборудования, которое мы обслуживаем</h3>
           <div className="grid md:grid-cols-3 gap-6">
             {equipmentTypes.map((type, index) => (
               <div key={index} className="bg-gradient-to-br from-pink-50 to-purple-50 rounded-2xl p-8 text-center hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
@@ -74,14 +74,14 @@ const EquipmentSection = () => {
                   <span className="text-white text-2xl">🖨️</span>
                 </div>
                 <h4 className="text-xl font-semibold text-gray-900 mb-2">{type}</h4>
-                <p className="text-gray-600">Professional maintenance and repair services</p>
+                <p className="text-gray-600">Профессиональное обслуживание и ремонт</p>
               </div>
             ))}
           </div>
           
           <div className="mt-8 p-6 bg-yellow-50 rounded-2xl border border-yellow-200">
             <p className="text-yellow-800 font-medium">
-              <strong>Note:</strong> We do not service inkjet printers. We specialize exclusively in laser printers and plotters to ensure the highest quality service.
+              <strong>Примечание:</strong> Мы не обслуживаем струйные принтеры. Мы специализируемся исключительно на лазерных принтерах и плоттерах для обеспечения высочайшего качества обслуживания.
             </p>
           </div>
         </div>

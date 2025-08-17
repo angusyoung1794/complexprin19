@@ -15,34 +15,34 @@ const ServicesSection = () => {
   const services = [
     {
       id: 1,
-      title: "Comprehensive Subscription Service",
-      description: "Monthly or quarterly preventive maintenance ensuring long-term operation of your office equipment.",
-      price: "From $99/month",
+      title: "Комплексное абонентское обслуживание",
+      description: "Ежемесячное или ежеквартальное профилактическое обслуживание, обеспечивающее долгосрочную работу вашего офисного оборудования.",
+      price: "От 7000₽/месяц",
       popular: true,
       features: [
-        "Regular preventive maintenance",
-        "Unlimited repair time until problem solved", 
-        "Guaranteed service and spare parts",
-        "Flexible scheduling to match your work hours",
-        "Priority support response",
-        "Equipment optimization recommendations"
+        "Регулярное профилактическое обслуживание",
+        "Неограниченное время ремонта до решения проблемы", 
+        "Гарантированное обслуживание и запчасти",
+        "Гибкое планирование под ваш рабочий график",
+        "Приоритетная поддержка",
+        "Рекомендации по оптимизации оборудования"
       ],
       icon: Shield,
       color: "from-pink-500 to-purple-600"
     },
     {
       id: 2,
-      title: "One-time Repair Service",
-      description: "Professional repair service for immediate equipment issues with warranty coverage.",
-      price: "From $75/visit",
+      title: "Разовый ремонт",
+      description: "Профессиональная услуга ремонта для решения немедленных проблем с оборудованием с гарантийным покрытием.",
+      price: "От 5000₽/выезд",
       popular: false,
       features: [
-        "Quick professional diagnosis",
-        "Expert repair with genuine parts",
-        "Service warranty included",
-        "Same-day service available",
-        "Transparent pricing",
-        "Post-repair quality assurance"
+        "Быстрая профессиональная диагностика",
+        "Экспертный ремонт с оригинальными деталями",
+        "Гарантия на обслуживание включена",
+        "Возможность обслуживания в день обращения",
+        "Прозрачное ценообразование",
+        "Контроль качества после ремонта"
       ],
       icon: Wrench,
       color: "from-purple-500 to-pink-600"
@@ -52,18 +52,18 @@ const ServicesSection = () => {
   const advantages = [
     {
       icon: Clock,
-      title: "Cost Effective",
-      description: "Subscription services cost less than multiple one-time visits"
+      title: "Экономически выгодно",
+      description: "Абонентское обслуживание стоит меньше множественных разовых вызовов"
     },
     {
       icon: Shield,
-      title: "Guaranteed Quality",
-      description: "Extensive experience with major companies and service centers"
+      title: "Гарантированное качество",
+      description: "Обширный опыт работы с крупными компаниями и сервисными центрами"
     },
     {
       icon: Star,
-      title: "Flexible Scheduling",
-      description: "Our technicians adjust to your work schedule and availability"
+      title: "Гибкий график",
+      description: "Наши техники подстраиваются под ваш рабочий график и доступность"
     }
   ];
 
@@ -72,16 +72,16 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <Badge className="mb-4 bg-pink-100 text-pink-700 hover:bg-pink-200">
-            Our Services
+            Наши услуги
           </Badge>
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Choose Your Perfect
+            Выберите идеальный
             <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent block lg:inline lg:ml-4">
-              Service Plan
+              тарифный план
             </span>
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Our subscription services provide better value than one-time visits, with unlimited time dedicated to solving your problems and flexible scheduling that works around your business hours.
+            Наши абонентские услуги обеспечивают лучшую ценность по сравнению с разовыми вызовами, с неограниченным временем, посвященным решению ваших проблем, и гибким планированием, которое работает в соответствии с вашими рабочими часами.
           </p>
         </div>
 
@@ -95,7 +95,7 @@ const ServicesSection = () => {
               }`}>
                 {service.popular && (
                   <div className="absolute top-0 right-0 bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-2 rounded-bl-lg">
-                    <span className="text-sm font-semibold">Most Popular</span>
+                    <span className="text-sm font-semibold">Самый популярный</span>
                   </div>
                 )}
                 
@@ -127,7 +127,7 @@ const ServicesSection = () => {
                     }`}
                     variant={service.popular ? "default" : "outline"}
                   >
-                    Get Started
+                    Начать
                   </Button>
                 </CardContent>
               </Card>
