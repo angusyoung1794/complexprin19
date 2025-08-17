@@ -8,10 +8,7 @@ import { Textarea } from './ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Badge } from './ui/badge';
 import { commonIssues, supportedBrands } from '../data/mock';
-import axios from 'axios';
-
-const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
-const API = `${BACKEND_URL}/api`;
+import emailService from '../services/emailService';
 
 const RepairRequestForm = () => {
   const [formData, setFormData] = useState({
@@ -38,23 +35,47 @@ const RepairRequestForm = () => {
     }));
   };
 
+  const validateForm = () => {
+    const required = ['name', 'email', 'phone', 'equipmentBrand', 'issue'];
+    for (let field of required) {
+      if (!formData[field] || formData[field].trim() === '') {
+        setError(`Please fill in the ${field.replace(/([A-Z])/g, ' $1').toLowerCase()} field.`);
+        return false;
+      }
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setError('Please enter a valid email address.');
+      return false;
+    }
+
+    return true;
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError('');
     
+    if (!validateForm()) {
+      setIsSubmitting(false);
+      return;
+    }
+    
     try {
-      const response = await axios.post(`${API}/repair-requests`, formData);
+      const response = await emailService.sendRepairRequest(formData);
       
-      if (response.data.success) {
+      if (response.success) {
         setIsSubmitted(true);
-        setRequestId(response.data.request_id);
+        setRequestId(response.request_id);
       } else {
         setError('Failed to submit repair request. Please try again.');
       }
     } catch (error) {
       console.error('Error submitting repair request:', error);
-      setError(error.response?.data?.detail || 'Failed to submit repair request. Please try again.');
+      setError(error.message || 'Failed to submit repair request. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
@@ -85,7 +106,7 @@ const RepairRequestForm = () => {
                     <li>• Our technician will call you to confirm details</li>
                     <li>• We'll schedule a convenient service time</li>
                     <li>• Professional diagnosis and repair</li>
-                    <li>• Email confirmation has been sent to Print Complex</li>
+                    <li>• Email notification sent to Print Complex team</li>
                   </ul>
                 </div>
                 <Button 
@@ -243,7 +264,7 @@ const RepairRequestForm = () => {
                         </SelectTrigger>
                         <SelectContent>
                           {supportedBrands.map((brand, index) => (
-                            <SelectItem key={index} value={brand.toLowerCase().replace(/\s+/g, '-')}>
+                            <SelectItem key={index} value={brand.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '')}>
                               {brand}
                             </SelectItem>
                           ))}
