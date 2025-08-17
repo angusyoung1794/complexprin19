@@ -35,7 +35,7 @@ const Header = () => {
             </div>
             <div>
               <h1 className="text-xl font-bold text-gray-900">Print Complex</h1>
-              <p className="text-xs text-gray-500 hidden sm:block">Professional Equipment Service</p>
+              <p className="text-xs text-gray-500 hidden sm:block">Профессиональное обслуживание оборудования</p>
             </div>
           </div>
 
@@ -45,31 +45,31 @@ const Header = () => {
               onClick={() => scrollToSection('home')}
               className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium"
             >
-              Home
+              Главная
             </button>
             <button 
               onClick={() => scrollToSection('services')}
               className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium"
             >
-              Services
+              Услуги
             </button>
             <button 
               onClick={() => scrollToSection('equipment')}
               className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium"
             >
-              Equipment
+              Оборудование
             </button>
             <button 
               onClick={() => scrollToSection('about')}
               className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium"
             >
-              About
+              О нас
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
               className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium"
             >
-              Contact
+              Контакты
             </button>
           </nav>
 
@@ -83,7 +83,7 @@ const Header = () => {
               onClick={() => scrollToSection('repair-request')}
               className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-6 py-2 rounded-full transition-all duration-300 transform hover:scale-105"
             >
-              Request Repair
+              Заявка на ремонт
             </Button>
           </div>
 
@@ -104,31 +104,31 @@ const Header = () => {
                 onClick={() => scrollToSection('home')}
                 className="px-4 py-3 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200"
               >
-                Home
+                Главная
               </button>
               <button 
                 onClick={() => scrollToSection('services')}
                 className="px-4 py-3 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200"
               >
-                Services
+                Услуги
               </button>
               <button 
                 onClick={() => scrollToSection('equipment')}
                 className="px-4 py-3 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200"
               >
-                Equipment
+                Оборудование
               </button>
               <button 
                 onClick={() => scrollToSection('about')}
                 className="px-4 py-3 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200"
               >
-                About
+                О нас
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
                 className="px-4 py-3 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200"
               >
-                Contact
+                Контакты
               </button>
               <div className="px-4 py-3 border-t">
                 <div className="flex items-center space-x-2 text-sm text-gray-600 mb-3">
@@ -139,7 +139,7 @@ const Header = () => {
                   onClick={() => scrollToSection('repair-request')}
                   className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white py-2 rounded-full transition-all duration-300"
                 >
-                  Request Repair
+                  Заявка на ремонт
                 </Button>
               </div>
             </nav>
