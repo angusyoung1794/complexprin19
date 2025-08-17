@@ -15,23 +15,23 @@ class EmailService {
 
   formatIssueType(issueValue) {
     const issueMapping = {
-      'poor-print-quality': 'Poor Print Quality',
-      'print-jams': 'Print Jams',
-      'paper-wont-pickup': 'Paper Won\'t Pick Up', 
-      'screen-wont-light': 'Screen Won\'t Light Up',
-      'error-code': 'Error Code Display',
-      'toner-issues': 'Toner/Ink Issues',
-      'connectivity-problems': 'Connectivity Problems',
-      'other': 'Other Issue'
+      'poor-print-quality': 'Плохое качество печати',
+      'print-jams': 'Замятие бумаги',
+      'paper-wont-pickup': 'Бумага не захватывается', 
+      'screen-wont-light': 'Экран не включается',
+      'error-code': 'Отображение кода ошибки',
+      'toner-issues': 'Проблемы с тонером/чернилами',
+      'connectivity-problems': 'Проблемы с подключением',
+      'other': 'Другая проблема'
     };
     return issueMapping[issueValue] || issueValue;
   }
 
   formatUrgency(urgencyValue) {
     const urgencyMapping = {
-      'low': 'Standard (3-5 days)',
-      'medium': 'Priority (1-2 days)',
-      'high': 'Urgent (Same day)'
+      'low': 'Стандартно (3-5 дней)',
+      'medium': 'Приоритет (1-2 дня)',
+      'high': 'Срочно (в тот же день)'
     };
     return urgencyMapping[urgencyValue] || urgencyValue;
   }
