@@ -1,26 +1,26 @@
-// Mock data for Print Complex website
+// Mock data for Print Complex website - Russian version
 
 export const companyInfo = {
   name: "Print Complex",
   phone: "+79104297686",
   email: "9104297686@outlook.com",
-  address: "Abramtsevskaya str., 2",
-  description: "Save on printing equipment maintenance and extend its service life with our professional services."
+  address: "ул. Абрамцевская, 2",
+  description: "Экономьте на обслуживании печатного оборудования и продлевайте срок его службы с помощью наших профессиональных услуг."
 };
 
 export const services = [
   {
     id: 1,
-    title: "Comprehensive Subscription Service",
-    description: "Monthly or quarterly preventive maintenance ensuring long-term operation of your office equipment.",
-    features: ["Preventive maintenance", "Unlimited repair time", "Guaranteed service", "Spare parts warranty"],
+    title: "Комплексное абонентское обслуживание",
+    description: "Ежемесячное или ежеквартальное профилактическое обслуживание, обеспечивающее долгосрочную работу вашего офисного оборудования.",
+    features: ["Профилактическое обслуживание", "Неограниченное время ремонта", "Гарантированное обслуживание", "Гарантия на запчасти"],
     popular: true
   },
   {
     id: 2,
-    title: "One-time Repair Service",
-    description: "Professional repair service for immediate equipment issues with warranty coverage.",
-    features: ["Quick diagnosis", "Professional repair", "Service warranty", "Genuine spare parts"],
+    title: "Разовый ремонт",
+    description: "Профессиональная услуга ремонта для решения немедленных проблем с оборудованием с гарантийным покрытием.",
+    features: ["Быстрая диагностика", "Профессиональный ремонт", "Гарантия на обслуживание", "Оригинальные запчасти"],
     popular: false
   }
 ];
@@ -35,54 +35,54 @@ export const supportedBrands = [
 ];
 
 export const equipmentTypes = [
-  "Laser Printers",
-  "Plotters",
-  "Multifunction Devices"
+  "Лазерные принтеры",
+  "Плоттеры",
+  "Многофункциональные устройства"
 ];
 
 export const clientCompanies = [
-  "Svyaznoy",
-  "Stroygazmontazh", 
-  "SovcomBank",
+  "Связной",
+  "Стройгазмонтаж", 
+  "Совкомбанк",
   "Burger King",
-  "Cryogenmash",
+  "Криогенмаш",
   "X5 Group"
 ];
 
 export const commonIssues = [
-  { value: "poor-print-quality", label: "Poor Print Quality" },
-  { value: "print-jams", label: "Print Jams" },
-  { value: "paper-wont-pickup", label: "Paper Won't Pick Up" },
-  { value: "screen-wont-light", label: "Screen Won't Light Up" },
-  { value: "error-code", label: "Error Code Display" },
-  { value: "toner-issues", label: "Toner/Ink Issues" },
-  { value: "connectivity-problems", label: "Connectivity Problems" },
-  { value: "other", label: "Other Issue" }
+  { value: "poor-print-quality", label: "Плохое качество печати" },
+  { value: "print-jams", label: "Замятие бумаги" },
+  { value: "paper-wont-pickup", label: "Бумага не захватывается" },
+  { value: "screen-wont-light", label: "Экран не включается" },
+  { value: "error-code", label: "Отображение кода ошибки" },
+  { value: "toner-issues", label: "Проблемы с тонером/чернилами" },
+  { value: "connectivity-problems", label: "Проблемы с подключением" },
+  { value: "other", label: "Другая проблема" }
 ];
 
 export const printerImages = [
   {
     id: 1,
     url: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxwcmludGVyfGVufDB8fHx8MTc1Mzk3ODUyN3ww&ixlib=rb-4.1.0&q=85",
-    alt: "Professional HP All-in-One Printer",
+    alt: "Профессиональное МФУ HP",
     brand: "HP"
   },
   {
     id: 2,
     url: "https://images.unsplash.com/photo-1650094980833-7373de26feb6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwyfHxwcmludGVyfGVufDB8fHx8MTc1Mzk3ODUyN3ww&ixlib=rb-4.1.0&q=85",
-    alt: "White Office Copying Machine",
+    alt: "Белое офисное копировальное устройство",
     brand: "Canon"
   },
   {
     id: 3,
     url: "https://images.unsplash.com/photo-1708793699492-5fa208f52dcb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwzfHxwcmludGVyfGVufDB8fHx8MTc1Mzk3ODUyN3ww&ixlib=rb-4.1.0&q=85",
-    alt: "Professional Printer in Office Environment",
+    alt: "Профессиональный принтер в офисной среде",
     brand: "Kyocera"
   },
   {
     id: 4,
     url: "https://images.unsplash.com/photo-1706895040634-62055892cbbb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHw0fHxwcmludGVyfGVufDB8fHx8MTc1Mzk3ODUyN3ww&ixlib=rb-4.1.0&q=85",
-    alt: "Color Ink Photo Printer",
+    alt: "Цветной струйный фотопринтер",
     brand: "Ricoh"
   }
 ];
@@ -90,47 +90,47 @@ export const printerImages = [
 export const testimonials = [
   {
     id: 1,
-    company: "Svyaznoy",
-    text: "Print Complex has been maintaining our printing equipment for over 2 years. Their subscription service saves us significant costs.",
-    author: "IT Department"
+    company: "Связной",
+    text: "Print Complex обслуживает наше печатное оборудование уже более 2 лет. Их абонентское обслуживание значительно экономит наши расходы.",
+    author: "IT-отдел"
   },
   {
     id: 2,
-    company: "SovcomBank", 
-    text: "Professional service and quick response times. Our printers are always running smoothly.",
-    author: "Operations Manager"
+    company: "Совкомбанк", 
+    text: "Профессиональное обслуживание и быстрое время отклика. Наши принтеры всегда работают бесперебойно.",
+    author: "Менеджер по операциям"
   },
   {
     id: 3,
     company: "X5 Group",
-    text: "Reliable maintenance service that keeps our office equipment operating at peak performance.",
-    author: "Facilities Team"
+    text: "Надежный сервис обслуживания, который поддерживает наше офисное оборудование на пике производительности.",
+    author: "Команда по эксплуатации"
   }
 ];
 
 export const repairProcessSteps = [
   {
     id: 1,
-    title: "Request Submission",
-    description: "Submit your repair request through our online form with equipment details and issue description.",
+    title: "Подача заявки",
+    description: "Отправьте заявку на ремонт через нашу онлайн-форму с указанием деталей оборудования и описания проблемы.",
     icon: "FileText"
   },
   {
     id: 2,
-    title: "Quick Diagnosis",
-    description: "Our experienced technicians perform rapid diagnosis to identify the root cause of the problem.",
+    title: "Быстрая диагностика",
+    description: "Наши опытные техники проводят быструю диагностику для выявления основной причины проблемы.",
     icon: "Search"
   },
   {
     id: 3,
-    title: "Professional Repair",
-    description: "Using genuine spare parts and proven techniques, we restore your equipment to optimal condition.",
+    title: "Профессиональный ремонт",
+    description: "Используя оригинальные запчасти и проверенные методы, мы восстанавливаем ваше оборудование до оптимального состояния.",
     icon: "Wrench"
   },
   {
     id: 4,
-    title: "Quality Assurance", 
-    description: "Comprehensive testing ensures your equipment operates perfectly before completion.",
+    title: "Контроль качества", 
+    description: "Комплексное тестирование гарантирует, что ваше оборудование работает идеально перед завершением работ.",
     icon: "CheckCircle"
   }
 ];
@@ -139,10 +139,10 @@ export const repairProcessSteps = [
 export const submitRepairRequest = async (formData) => {
   return new Promise((resolve) => {
     setTimeout(() => {
-      console.log("Repair request submitted:", formData);
+      console.log("Заявка на ремонт отправлена:", formData);
       resolve({
         success: true,
-        message: "Your repair request has been submitted successfully. We will contact you within 24 hours.",
+        message: "Ваша заявка на ремонт была успешно отправлена. Мы свяжемся с вами в течение 24 часов.",
         requestId: Math.random().toString(36).substr(2, 9).toUpperCase()
       });
     }, 1000);
