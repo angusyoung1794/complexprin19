@@ -65,25 +65,25 @@ export const commonIssues = [
 export const printerImages = [
   {
     id: 1,
-    url: "/images/printer-hp-allinone.jpg",
+    url: "/images/printer-hp-allinone.svg",
     alt: "Профессиональное МФУ HP",
     brand: "HP"
   },
   {
     id: 2,
-    url: "/images/printer-canon-office.jpg",
+    url: "/images/printer-canon-office.svg",
     alt: "Белое офисное копировальное устройство Canon",
     brand: "Canon"
   },
   {
     id: 3,
-    url: "/images/printer-kyocera-professional.jpg",
+    url: "/images/printer-kyocera-professional.svg",
     alt: "Профессиональный принтер Kyocera в офисной среде",
     brand: "Kyocera"
   },
   {
     id: 4,
-    url: "/images/printer-ricoh-color.jpg",
+    url: "/images/printer-ricoh-color.svg",
     alt: "Цветной принтер Ricoh для офиса",
     brand: "Ricoh"
   }
