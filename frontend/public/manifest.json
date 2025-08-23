@@ -1,0 +1,24 @@
+{
+  "short_name": "Комплекс Принт",
+  "name": "Комплекс Принт - Ремонт и обслуживание принтеров",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#ec4899",
+  "background_color": "#ffffff",
+  "description": "Профессиональное обслуживание печатного оборудования HP, Canon, Kyocera, Ricoh в Москве",
+  "lang": "ru",
+  "scope": "/",
+  "orientation": "portrait-primary"
+}
