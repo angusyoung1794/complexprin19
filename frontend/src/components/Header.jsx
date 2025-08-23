@@ -77,7 +77,7 @@ const Header = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <div className="flex items-center space-x-2 text-sm text-gray-600">
               <Phone size={16} className="text-pink-500" />
-              <span>+79104297686</span>
+              <span>+74951031468</span>
             </div>
             <Button 
               onClick={() => scrollToSection('repair-request')}
