@@ -65,26 +65,26 @@ export const commonIssues = [
 export const printerImages = [
   {
     id: 1,
-    url: "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxwcmludGVyfGVufDB8fHx8MTc1Mzk3ODUyN3ww&ixlib=rb-4.1.0&q=85",
+    url: "/images/printer-hp-allinone.jpg",
     alt: "Профессиональное МФУ HP",
     brand: "HP"
   },
   {
     id: 2,
-    url: "https://images.unsplash.com/photo-1650094980833-7373de26feb6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwyfHxwcmludGVyfGVufDB8fHx8MTc1Mzk3ODUyN3ww&ixlib=rb-4.1.0&q=85",
-    alt: "Белое офисное копировальное устройство",
+    url: "/images/printer-canon-office.jpg",
+    alt: "Белое офисное копировальное устройство Canon",
     brand: "Canon"
   },
   {
     id: 3,
-    url: "https://images.unsplash.com/photo-1708793699492-5fa208f52dcb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwzfHxwcmludGVyfGVufDB8fHx8MTc1Mzk3ODUyN3ww&ixlib=rb-4.1.0&q=85",
-    alt: "Профессиональный принтер в офисной среде",
+    url: "/images/printer-kyocera-professional.jpg",
+    alt: "Профессиональный принтер Kyocera в офисной среде",
     brand: "Kyocera"
   },
   {
     id: 4,
-    url: "https://images.unsplash.com/photo-1706895040634-62055892cbbb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHw0fHxwcmludGVyfGVufDB8fHx8MTc1Mzk3ODUyN3ww&ixlib=rb-4.1.0&q=85",
-    alt: "Цветной струйный фотопринтер",
+    url: "/images/printer-ricoh-color.jpg",
+    alt: "Цветной принтер Ricoh для офиса",
     brand: "Ricoh"
   }
 ];
