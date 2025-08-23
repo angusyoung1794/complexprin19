@@ -1,10 +1,10 @@
 import emailjs from '@emailjs/browser';
 
-// EmailJS Configuration
+// EmailJS Configuration - ВРЕМЕННО для тестирования
 const EMAILJS_CONFIG = {
-  SERVICE_ID: 'your_service_id_here', // Replace with your Service ID from EmailJS
-  TEMPLATE_ID: 'your_template_id_here', // Replace with your Template ID from EmailJS  
-  PUBLIC_KEY: 'your_public_key_here' // Replace with your Public Key from EmailJS
+  SERVICE_ID: 'test_service', // Временная заглушка для тестирования
+  TEMPLATE_ID: 'test_template', // Временная заглушка для тестирования
+  PUBLIC_KEY: 'test_key' // Временная заглушка для тестирования
 };
 
 class EmailService {
