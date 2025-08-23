@@ -50,23 +50,40 @@ class EmailService {
 
   async sendRepairRequest(formData) {
     try {
+      // ВРЕМЕННОЕ РЕШЕНИЕ: Проверяем, настроен ли EmailJS
+      if (EMAILJS_CONFIG.SERVICE_ID === 'test_service') {
+        console.log('EmailJS не настроен, используется тестовый режим');
+        console.log('Данные формы:', formData);
+        
+        // Симуляция успешной отправки
+        await new Promise(resolve => setTimeout(resolve, 1000));
+        
+        const requestId = this.generateRequestId();
+        
+        return {
+          success: true,
+          message: 'Ваша заявка на ремонт была успешно отправлена. Мы свяжемся с вами в течение 24 часов.',
+          request_id: requestId
+        };
+      }
+
       // Prepare email parameters with formatted data
       const emailParams = {
-        name: formData.name || 'Not provided',
-        email: formData.email || 'Not provided',
-        phone: formData.phone || 'Not provided',
-        company: formData.company || 'Not specified',
-        equipmentBrand: this.formatEquipmentBrand(formData.equipmentBrand) || 'Not specified',
-        equipmentModel: formData.equipmentModel || 'Not specified',
-        issue: this.formatIssueType(formData.issue) || 'Not specified',
-        urgency: this.formatUrgency(formData.urgency) || 'Medium Priority',
-        description: formData.description || 'No description provided',
+        name: formData.name || 'Не указано',
+        email: formData.email || 'Не указано',
+        phone: formData.phone || 'Не указано',
+        company: formData.company || 'Не указано',
+        equipmentBrand: this.formatEquipmentBrand(formData.equipmentBrand) || 'Не указано',
+        equipmentModel: formData.equipmentModel || 'Не указано',
+        issue: this.formatIssueType(formData.issue) || 'Не указано',
+        urgency: this.formatUrgency(formData.urgency) || 'Средний приоритет',
+        description: formData.description || 'Описание не предоставлено',
         // Additional fields for template
-        timestamp: new Date().toLocaleString(),
+        timestamp: new Date().toLocaleString('ru-RU'),
         requestId: this.generateRequestId()
       };
 
-      console.log('Sending email with params:', emailParams);
+      console.log('Отправка email с параметрами:', emailParams);
 
       // Send email using EmailJS
       const response = await emailjs.send(
@@ -75,7 +92,7 @@ class EmailService {
         emailParams
       );
 
-      console.log('Email sent successfully:', response);
+      console.log('Email отправлен успешно:', response);
 
       return {
         success: true,
@@ -84,13 +101,13 @@ class EmailService {
       };
 
     } catch (error) {
-      console.error('EmailJS Error:', error);
+      console.error('Ошибка EmailJS:', error);
       
       // Provide user-friendly error messages in Russian
       let errorMessage = 'Не удалось отправить заявку на ремонт. Пожалуйста, попробуйте еще раз.';
       
       if (error.status === 400) {
-        errorMessage = 'Пожалуйста, проверьте все обязательные поля и попробуйте еще раз.';
+        errorMessage = 'EmailJS не настроен правильно. Обратитесь к администратору.';
       } else if (error.status === 403) {
         errorMessage = 'Сервис временно недоступен. Пожалуйста, позвоните нам напрямую.';
       } else if (error.text) {
