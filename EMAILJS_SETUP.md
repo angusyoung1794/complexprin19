@@ -95,9 +95,9 @@ const EMAILJS_CONFIG = {
     </div>
     
     <div style="text-align: center; margin-top: 30px; color: #666; font-size: 14px;">
-      <p><strong>Print Complex</strong> - Профессиональное обслуживание оборудования</p>
-      <p>📞 +79104297686 | 📧 9104297686@outlook.com</p>
-      <p>📍 ул. Абрамцевская, 2</p>
+      <p><strong>Комплекс Принт</strong> - Профессиональное обслуживание оборудования</p>
+      <p>📞 +74951031468 | 📧 9104297686@outlook.com</p>
+      <p>📍 г. Москва, Абрамцевская 11 к1 стр3</p>
       <p>🌐 complexprint.ru</p>
     </div>
   </div>
