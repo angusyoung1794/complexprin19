@@ -105,9 +105,9 @@ const EMAILJS_CONFIG = {
 ```
 
 ### 7. Template Settings
-- **From Name:** Print Complex Website
+- **From Name:** Комплекс Принт Website
 - **Reply To:** 9104297686@outlook.com
-- **Subject:** 🖨️ New Repair Request from {{name}} - Print Complex
+- **Subject:** 🖨️ Новая заявка на ремонт от {{name}} - Комплекс Принт
 
 ### 8. Testing the Setup
 After configuration, test the form on your website. You should receive formatted emails at your configured email address.
