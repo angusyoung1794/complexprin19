@@ -34,7 +34,7 @@ const Header = () => {
               <span className="text-white font-bold text-lg">PC</span>
             </div>
             <div>
-              <h1 className="text-xl font-bold text-gray-900">Print Complex</h1>
+              <h1 className="text-xl font-bold text-gray-900">Комплекс Принт</h1>
               <p className="text-xs text-gray-500 hidden sm:block">Профессиональное обслуживание оборудования</p>
             </div>
           </div>
