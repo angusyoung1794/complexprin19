@@ -100,7 +100,7 @@ const HeroSection = () => {
           <div className="relative">
             <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxwcmludGVyfGVufDB8fHx8MTc1Mzk3ODUyN3ww&ixlib=rb-4.1.0&q=85"
+                src="/images/printer-hp-allinone.svg"
                 alt="Профессиональное печатное оборудование"
                 className="w-full h-auto rounded-2xl shadow-lg"
               />
