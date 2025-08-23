@@ -181,7 +181,7 @@ const RepairRequestForm = () => {
                   <MapPin className="w-5 h-5 text-pink-500" />
                   <div>
                     <p className="font-semibold text-gray-900">Адрес</p>
-                    <p className="text-gray-600">ул. Абрамцевская, 2</p>
+                    <p className="text-gray-600">г. Москва, Абрамцевская 11 к1 стр3</p>
                   </div>
                 </div>
                 <div className="p-4 bg-gradient-to-br from-pink-50 to-purple-50 rounded-lg">
