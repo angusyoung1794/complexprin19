@@ -52,7 +52,7 @@ const EMAILJS_CONFIG = {
 ```html
 <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
   <div style="background: linear-gradient(135deg, #ec4899, #9333ea); color: white; padding: 20px; text-align: center; border-radius: 10px 10px 0 0;">
-    <h1 style="margin: 0;">🖨️ Print Complex</h1>
+    <h1 style="margin: 0;">🖨️ Комплекс Принт</h1>
     <h2 style="margin: 10px 0;">Новая заявка на ремонт оборудования</h2>
     <p style="margin: 5px 0;">Отправлено {{timestamp}}</p>
   </div>
