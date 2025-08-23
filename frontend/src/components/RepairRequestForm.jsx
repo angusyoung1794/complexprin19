@@ -86,23 +86,30 @@ const RepairRequestForm = () => {
     setIsSubmitting(true);
     setError('');
     
+    console.log('📝 Попытка отправки формы с данными:', formData);
+    
     if (!validateForm()) {
       setIsSubmitting(false);
       return;
     }
     
     try {
+      console.log('📤 Отправка заявки на ремонт...');
       const response = await emailService.sendRepairRequest(formData);
       
+      console.log('📨 Ответ от сервиса:', response);
+      
       if (response.success) {
+        console.log('✅ Заявка успешно отправлена');
         setIsSubmitted(true);
         setRequestId(response.request_id);
       } else {
+        console.error('❌ Неуспешная отправка:', response);
         setError('Не удалось отправить заявку на ремонт. Пожалуйста, попробуйте еще раз.');
       }
     } catch (error) {
-      console.error('Error submitting repair request:', error);
-      setError(error.message || 'Не удалось отправить заявку на ремонт. Пожалуйста, попробуйте еще раз.');
+      console.error('❌ Ошибка при отправке заявки на ремонт:', error);
+      setError(error.message || 'Произошла ошибка при отправке заявки. Пожалуйста, попробуйте еще раз или свяжитесь с нами по телефону +74951031468.');
     } finally {
       setIsSubmitting(false);
     }
