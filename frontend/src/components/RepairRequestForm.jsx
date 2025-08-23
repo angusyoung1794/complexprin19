@@ -167,7 +167,7 @@ const RepairRequestForm = () => {
                   <Phone className="w-5 h-5 text-pink-500" />
                   <div>
                     <p className="font-semibold text-gray-900">Телефон</p>
-                    <p className="text-gray-600">+79104297686</p>
+                    <p className="text-gray-600">+74951031468</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
