@@ -37,11 +37,31 @@ const RepairRequestForm = () => {
 
   const validateForm = () => {
     const required = ['name', 'email', 'phone', 'equipmentBrand', 'issue'];
-    for (let field of required) {
-      if (!formData[field] || formData[field].trim() === '') {
-        setError(`Пожалуйста, заполните поле "${field.replace(/([A-Z])/g, ' $1').toLowerCase()}".`);
-        return false;
-      }
+    
+    // Проверяем каждое поле отдельно для лучшего UX
+    if (!formData.name || formData.name.trim() === '') {
+      setError('Пожалуйста, введите ваше полное имя.');
+      return false;
+    }
+    
+    if (!formData.email || formData.email.trim() === '') {
+      setError('Пожалуйста, введите ваш email адрес.');
+      return false;
+    }
+    
+    if (!formData.phone || formData.phone.trim() === '') {
+      setError('Пожалуйста, введите ваш номер телефона.');
+      return false;
+    }
+    
+    if (!formData.equipmentBrand || formData.equipmentBrand.trim() === '') {
+      setError('Пожалуйста, выберите бренд оборудования.');
+      return false;
+    }
+    
+    if (!formData.issue || formData.issue.trim() === '') {
+      setError('Пожалуйста, выберите тип проблемы.');
+      return false;
     }
 
     // Email validation
@@ -51,6 +71,13 @@ const RepairRequestForm = () => {
       return false;
     }
 
+    // Phone validation (basic)
+    if (formData.phone.length < 10) {
+      setError('Пожалуйста, введите корректный номер телефона.');
+      return false;
+    }
+
+    console.log('✅ Валидация формы прошла успешно:', formData);
     return true;
   };
 
