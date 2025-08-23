@@ -133,7 +133,7 @@ const Header = () => {
               <div className="px-4 py-3 border-t">
                 <div className="flex items-center space-x-2 text-sm text-gray-600 mb-3">
                   <Phone size={16} className="text-pink-500" />
-                  <span>+79104297686</span>
+                  <span>+74951031468</span>
                 </div>
                 <Button 
                   onClick={() => scrollToSection('repair-request')}
