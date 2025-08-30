@@ -369,9 +369,30 @@ const RepairRequestForm = () => {
                     />
                   </div>
 
+                  {/* Terms and Conditions Checkbox */}
+                  <div className="flex items-start space-x-3 p-4 bg-gray-50 rounded-lg">
+                    <input
+                      type="checkbox"
+                      id="terms"
+                      checked={isAgreedToTerms}
+                      onChange={(e) => setIsAgreedToTerms(e.target.checked)}
+                      className="mt-1 w-4 h-4 text-pink-500 border-gray-300 rounded focus:ring-pink-500"
+                    />
+                    <label htmlFor="terms" className="text-sm text-gray-700 leading-relaxed">
+                      Продолжая, вы соглашаетесь со сбором и обработкой персональных данных и{' '}
+                      <button
+                        type="button"
+                        onClick={() => setIsModalOpen(true)}
+                        className="text-pink-600 underline hover:text-pink-700 focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-1 rounded"
+                      >
+                        пользовательским соглашением
+                      </button>
+                    </label>
+                  </div>
+
                   <Button 
                     type="submit" 
-                    disabled={isSubmitting}
+                    disabled={isSubmitting || !isAgreedToTerms}
                     className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                   >
                     {isSubmitting ? (
