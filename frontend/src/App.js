@@ -8,6 +8,7 @@ import EquipmentSection from "./components/EquipmentSection";
 import AboutSection from "./components/AboutSection";
 import RepairRequestForm from "./components/RepairRequestForm";
 import Footer from "./components/Footer";
+import UserAgreement from "./pages/UserAgreement";
 import { Toaster } from "./components/ui/toaster";
 
 const Home = () => {
