@@ -51,9 +51,8 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
         <a
-            id="emergent-badge"
-            target="_blank"
-            href="https://app.emergent.sh/?utm_source=emergent-badge"
+            id="help-button"
+            href="#repair-request"
             style="
                 display: flex !important;
                 align-items: center !important;
@@ -61,40 +60,34 @@
                 bottom: 20px;
                 right: 20px;
                 text-decoration: none;
-                padding: 6px 10px;
+                padding: 10px 16px;
                 font-family: -apple-system, BlinkMacSystemFont,
                     &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell,
                     &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;,
                     sans-serif !important;
-                font-size: 12px !important;
+                font-size: 14px !important;
+                font-weight: 600 !important;
                 z-index: 9999 !important;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
-                border-radius: 8px !important;
-                background-color: #ffffff !important;
-                border: 1px solid rgba(255, 255, 255, 0.25) !important;
+                box-shadow: 0 4px 16px rgba(236, 72, 153, 0.3) !important;
+                border-radius: 12px !important;
+                background: linear-gradient(135deg, #ec4899 0%, #8b5cf6 100%) !important;
+                color: #ffffff !important;
+                transition: all 0.3s ease !important;
+                border: none !important;
             "
+            onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(236, 72, 153, 0.4)'"
+            onmouseout="this.style.transform='translateY(0px)'; this.style.boxShadow='0 4px 16px rgba(236, 72, 153, 0.3)'"
         >
             <div
                 style="display: flex; flex-direction: row; align-items: center"
             >
-                <img
-                    style="width: 20px; height: 20px; margin-right: 8px"
-                    src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4"
-                />
-                <p
-                    style="
-                        color: #000000;
-                        font-family: -apple-system, BlinkMacSystemFont,
-                            &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu,
-                            Cantarell, &quot;Open Sans&quot;,
-                            &quot;Helvetica Neue&quot;, sans-serif !important;
-                        font-size: 12px !important;
-                        align-items: center;
-                        margin-bottom: 0;
-                    "
+                <svg
+                    style="width: 20px; height: 20px; margin-right: 8px; fill: currentColor"
+                    viewBox="0 0 24 24"
                 >
-                    Made with Emergent
-                </p>
+                    <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                </svg>
+                <span>Получить помощь</span>
             </div>
         </a>
         <script>
