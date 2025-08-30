@@ -7,7 +7,7 @@ import { Label } from './ui/label';
 import { Textarea } from './ui/textarea';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Badge } from './ui/badge';
-import { commonIssues, supportedBrands } from '../data/mock';
+import { commonIssues, repairFormBrands } from '../data/mock';
 import emailService from '../services/emailService';
 import UserAgreementModal from './UserAgreementModal';
 
