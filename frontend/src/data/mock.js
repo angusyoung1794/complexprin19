@@ -33,7 +33,9 @@ export const supportedBrands = [
   "Kyocera", 
   "Konica Minolta",
   "Xerox",
-  "Ricoh"
+  "Ricoh",
+  "Pantum",
+  "Другой бренд"
 ];
 
 export const equipmentTypes = [
