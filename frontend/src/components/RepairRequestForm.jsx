@@ -155,6 +155,7 @@ const RepairRequestForm = () => {
                 <Button 
                   onClick={() => {
                     setIsSubmitted(false);
+                    setIsAgreedToTerms(false);
                     setFormData({
                       name: '',
                       email: '',
