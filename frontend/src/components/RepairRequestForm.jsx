@@ -80,6 +80,12 @@ const RepairRequestForm = () => {
       return false;
     }
 
+    // Terms agreement validation
+    if (!isAgreedToTerms) {
+      setError('Пожалуйста, согласитесь с условиями обработки персональных данных и пользовательским соглашением.');
+      return false;
+    }
+
     console.log('✅ Валидация формы прошла успешно:', formData);
     return true;
   };
