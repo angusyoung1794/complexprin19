@@ -28,6 +28,8 @@ const RepairRequestForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [requestId, setRequestId] = useState('');
   const [error, setError] = useState('');
+  const [isAgreedToTerms, setIsAgreedToTerms] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleInputChange = (name, value) => {
     setFormData(prev => ({
