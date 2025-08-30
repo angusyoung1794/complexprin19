@@ -33,6 +33,15 @@ export const supportedBrands = [
   "Kyocera", 
   "Konica Minolta",
   "Xerox",
+  "Ricoh"
+];
+
+export const repairFormBrands = [
+  "Hewlett Packard (HP)",
+  "Canon",
+  "Kyocera", 
+  "Konica Minolta",
+  "Xerox",
   "Ricoh",
   "Pantum",
   "Другой бренд"
