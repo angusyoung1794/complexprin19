@@ -9,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { Badge } from './ui/badge';
 import { commonIssues, supportedBrands } from '../data/mock';
 import emailService from '../services/emailService';
+import UserAgreementModal from './UserAgreementModal';
 
 const RepairRequestForm = () => {
   const [formData, setFormData] = useState({
