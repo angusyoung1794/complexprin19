@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { companyInfo } from '../data/mock';
+import CompanyDetailsModal from './CompanyDetailsModal';
 
 const Footer = () => {
+  const [isDetailsModalOpen, setIsDetailsModalOpen] = useState(false);
+
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -18,7 +21,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">PC</span>
+                <span className="text-white font-bold text-lg">CP</span>
               </div>
               <div>
                 <h3 className="text-xl font-bold">{companyInfo.name}</h3>
@@ -50,33 +53,39 @@ const Footer = () => {
             <nav className="space-y-2">
               <button 
                 onClick={() => scrollToSection('home')}
-                className="block text-gray-300 hover:text-pink-400 transition-colors duration-200"
+                className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left"
               >
                 Главная
               </button>
               <button 
                 onClick={() => scrollToSection('services')}
-                className="block text-gray-300 hover:text-pink-400 transition-colors duration-200"
+                className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left"
               >
                 Услуги
               </button>
               <button 
                 onClick={() => scrollToSection('equipment')}
-                className="block text-gray-300 hover:text-pink-400 transition-colors duration-200"
+                className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left"
               >
                 Оборудование
               </button>
               <button 
                 onClick={() => scrollToSection('about')}
-                className="block text-gray-300 hover:text-pink-400 transition-colors duration-200"
+                className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left"
               >
                 О нас
               </button>
               <button 
                 onClick={() => scrollToSection('repair-request')}
-                className="block text-gray-300 hover:text-pink-400 transition-colors duration-200"
+                className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left"
               >
                 Заявка на ремонт
+              </button>
+              <button 
+                onClick={() => setIsDetailsModalOpen(true)}
+                className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left font-medium"
+              >
+                Реквизиты
               </button>
             </nav>
           </div>
@@ -120,11 +129,22 @@ const Footer = () => {
             <div className="flex space-x-6 mt-4 md:mt-0">
               <span className="text-gray-400 text-sm">Политика конфиденциальности</span>
               <span className="text-gray-400 text-sm">Условия обслуживания</span>
-              <span className="text-gray-400 text-sm">Свяжитесь с нами</span>
+              <button 
+                onClick={() => setIsDetailsModalOpen(true)}
+                className="text-gray-400 text-sm hover:text-pink-400 transition-colors duration-200"
+              >
+                Реквизиты компании
+              </button>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Company Details Modal */}
+      <CompanyDetailsModal 
+        isOpen={isDetailsModalOpen} 
+        onClose={() => setIsDetailsModalOpen(false)} 
+      />
     </footer>
   );
 };
