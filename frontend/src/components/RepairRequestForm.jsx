@@ -413,6 +413,12 @@ const RepairRequestForm = () => {
           </div>
         </div>
       </div>
+
+      {/* User Agreement Modal */}
+      <UserAgreementModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </section>
   );
 };
