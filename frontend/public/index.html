@@ -157,5 +157,28 @@
                 person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well
             });
         </script>
+        
+        <script>
+            // Smooth scroll to repair request form
+            document.addEventListener('DOMContentLoaded', function() {
+                const helpButton = document.getElementById('help-button');
+                if (helpButton) {
+                    helpButton.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        
+                        // Wait a bit for React to render the component
+                        setTimeout(() => {
+                            const repairSection = document.getElementById('repair-request');
+                            if (repairSection) {
+                                repairSection.scrollIntoView({
+                                    behavior: 'smooth',
+                                    block: 'start'
+                                });
+                            }
+                        }, 100);
+                    });
+                }
+            });
+        </script>
     </body>
 </html>
