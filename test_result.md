@@ -116,6 +116,9 @@ backend:
         - working: true
           agent: "main"
           comment: "Backend не требует изменений для данной задачи - все изменения в frontend"
+        - working: true
+          agent: "testing"
+          comment: "Backend stability testing completed successfully. All API endpoints working correctly: GET/POST /api/status, GET/POST /api/repair-requests, root endpoint /api/. MongoDB connection stable. Server running on port 8001 via supervisor. Minor: Email service has authentication issue (expected in test environment) but doesn't affect core functionality. Backend is stable after frontend changes."
 
 frontend:
   - task: "Добавить бренд Pantum в форму"
