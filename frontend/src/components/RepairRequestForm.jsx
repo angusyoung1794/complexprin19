@@ -307,7 +307,7 @@ const RepairRequestForm = () => {
                           <SelectValue placeholder="Выберите бренд оборудования" />
                         </SelectTrigger>
                         <SelectContent>
-                          {supportedBrands.map((brand, index) => (
+                          {repairFormBrands.map((brand, index) => (
                             <SelectItem key={index} value={brand.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '')}>
                               {brand}
                             </SelectItem>
