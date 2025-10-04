@@ -194,49 +194,64 @@ frontend:
           comment: "Установлен react-router-dom, создана отдельная страница /user-agreement"
 
   - task: "Добавить кнопку 'Выбери печатающего помошника'"
-    implemented: false
+    implemented: true
     working: false
     file: "components/EquipmentSection.jsx"
     stuck_count: 0
     priority: "high"
     needs_retesting: true
-    status_history: []
+    status_history:
+        - working: false
+          agent: "main"
+          comment: "Добавлена кнопка 'Выбери печатающего помошника' в EquipmentSection после текста про обслуживание"
 
   - task: "Создать данные принтеров из CSV"
-    implemented: false
+    implemented: true
     working: false
     file: "data/printers.js"
     stuck_count: 0
     priority: "high"
     needs_retesting: true
-    status_history: []
+    status_history:
+        - working: false
+          agent: "main"
+          comment: "Создан файл с данными принтеров из 4 CSV файлов (HP, Canon, Kyocera, Konica Minolta) с категоризацией по назначению"
 
   - task: "Создать страницу выбора принтеров"
-    implemented: false
+    implemented: true
     working: false
     file: "pages/PrinterSelection.jsx"
     stuck_count: 0
     priority: "high"
     needs_retesting: true
-    status_history: []
+    status_history:
+        - working: false
+          agent: "main"
+          comment: "Создана страница PrinterSelection с категориями использования и функциональностью выбора принтеров"
 
   - task: "Создать компоненты для принтеров"
-    implemented: false
+    implemented: true
     working: false
-    file: "components/PrinterCard.jsx, components/PrinterList.jsx"
+    file: "components/PrinterCard.jsx, components/PrinterList.jsx, components/PrinterCategoryCard.jsx"
     stuck_count: 0
     priority: "high"
     needs_retesting: true
-    status_history: []
+    status_history:
+        - working: false
+          agent: "main"
+          comment: "Созданы компоненты: PrinterCard (карточка принтера с кнопкой покупки), PrinterList (список с фильтрами), PrinterCategoryCard (карточка категории)"
 
   - task: "Добавить маршрутизацию для страницы принтеров"
-    implemented: false
+    implemented: true
     working: false
     file: "App.js"
     stuck_count: 0
     priority: "medium"
     needs_retesting: true
-    status_history: []
+    status_history:
+        - working: false
+          agent: "main"
+          comment: "Добавлен роут /printer-selection в App.js для страницы выбора принтеров"
 
 metadata:
   created_by: "main_agent"
