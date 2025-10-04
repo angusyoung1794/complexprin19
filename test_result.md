@@ -193,6 +193,51 @@ frontend:
           agent: "main"
           comment: "Установлен react-router-dom, создана отдельная страница /user-agreement"
 
+  - task: "Добавить кнопку 'Выбери печатающего помошника'"
+    implemented: false
+    working: false
+    file: "components/EquipmentSection.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history: []
+
+  - task: "Создать данные принтеров из CSV"
+    implemented: false
+    working: false
+    file: "data/printers.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history: []
+
+  - task: "Создать страницу выбора принтеров"
+    implemented: false
+    working: false
+    file: "pages/PrinterSelection.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history: []
+
+  - task: "Создать компоненты для принтеров"
+    implemented: false
+    working: false
+    file: "components/PrinterCard.jsx, components/PrinterList.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history: []
+
+  - task: "Добавить маршрутизацию для страницы принтеров"
+    implemented: false
+    working: false
+    file: "App.js"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history: []
+
 metadata:
   created_by: "main_agent"
   version: "1.0"
