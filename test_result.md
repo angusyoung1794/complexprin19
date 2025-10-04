@@ -273,5 +273,7 @@ test_plan:
 agent_communication:
     - agent: "main"
       message: "Реализованы все требуемые изменения в форме заявки на ремонт: добавлены новые бренды Pantum и 'Другой бренд', создана модалка с пользовательским соглашением, добавлен обязательный checkbox согласия с валидацией. Установлен React Router для навигации. Backend тестирование завершено успешно. Пользователь будет тестировать frontend вручную."
+    - agent: "main"
+      message: "Реализована новая функциональность выбора и покупки принтеров: добавлена кнопка 'Выбери печатающего помошника' в EquipmentSection, созданы данные принтеров из CSV файлов, реализованы страница выбора с категориями (Личное, Офисное, Высоконагруженный офис), компоненты для отображения принтеров с фильтрацией и сортировкой, функция покупки через email. Готово к тестированию."
     - agent: "testing"
       message: "Backend stability testing completed successfully. Created comprehensive backend_test.py and verified all API endpoints are working correctly. Server is running stable on port 8001, MongoDB connection is functional, all CRUD operations work properly. Email service has minor authentication issue but doesn't affect core API functionality. Backend is stable and ready after frontend changes."
