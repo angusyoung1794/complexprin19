@@ -9,6 +9,7 @@ import AboutSection from "./components/AboutSection";
 import RepairRequestForm from "./components/RepairRequestForm";
 import Footer from "./components/Footer";
 import UserAgreement from "./pages/UserAgreement";
+import PrinterSelection from "./pages/PrinterSelection";
 import { Toaster } from "./components/ui/toaster";
 
 const Home = () => {
