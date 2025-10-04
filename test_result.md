@@ -119,6 +119,9 @@ backend:
         - working: true
           agent: "testing"
           comment: "Backend stability testing completed successfully. All API endpoints working correctly: GET/POST /api/status, GET/POST /api/repair-requests, root endpoint /api/. MongoDB connection stable. Server running on port 8001 via supervisor. Minor: Email service has authentication issue (expected in test environment) but doesn't affect core functionality. Backend is stable after frontend changes."
+        - working: true
+          agent: "testing"
+          comment: "Повторное тестирование стабильности backend после добавления функциональности выбора принтеров. Все тесты пройдены успешно (5/5): подключение к серверу, API endpoints (/api/status, /api/repair-requests), MongoDB соединение, CORS конфигурация. Сервер работает стабильно на порту 8001 через supervisor. Логи показывают только ожидаемую ошибку email аутентификации, которая не влияет на основную функциональность. Backend полностью стабилен после изменений frontend."
 
 frontend:
   - task: "Добавить бренд Pantum в форму"
