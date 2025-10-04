@@ -17,9 +17,21 @@ const EquipmentSection = () => {
               всех ведущих брендов
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
             Мы специализируемся на обслуживании лазерных принтеров и плоттеров от всех основных производителей. Наши опытные техники имеют сертификаты для работы с оборудованием ведущих брендов.
           </p>
+          
+          {/* Кнопка выбора принтера */}
+          <div className="text-center">
+            <a 
+              href="/printer-selection" 
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-xl hover:from-pink-600 hover:to-purple-700 transform hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              <span className="mr-2">🖨️</span>
+              Выбери печатающего помошника
+              <span className="ml-2">→</span>
+            </a>
+          </div>
         </div>
 
         {/* Equipment Images Grid */}
