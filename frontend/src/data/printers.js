@@ -1,14 +1,47 @@
-// Коллекция реальных изображений принтеров
-const printerImages = [
-  'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400&h=300&fit=crop', // HP all-in-one
-  'https://images.unsplash.com/photo-1650094980833-7373de26feb6?w=400&h=300&fit=crop', // White & black office
-  'https://images.unsplash.com/photo-1650696868612-4b836291b323?w=400&h=300&fit=crop', // White on table
-  'https://images.unsplash.com/photo-1630327722923-5ebd594ddda9?w=400&h=300&fit=crop', // White & gray
-  'https://images.unsplash.com/photo-1571845995697-28be270350de?w=400&h=300&fit=crop', // Beige printer
-  'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400&h=300&fit=crop&sat=-100', // Grayscale variant 1
-  'https://images.unsplash.com/photo-1650094980833-7373de26feb6?w=400&h=300&fit=crop&sat=-100', // Grayscale variant 2
-  'https://images.unsplash.com/photo-1650696868612-4b836291b323?w=400&h=300&fit=crop&sat=-100', // Grayscale variant 3
-];
+// Цвета брендов для генерации placeholder изображений
+const brandColors = {
+  'HP': { bg: '#0096D6', text: '#FFFFFF' },
+  'Canon': { bg: '#CC0000', text: '#FFFFFF' },
+  'Kyocera': { bg: '#009FE3', text: '#FFFFFF' },
+  'Konica Minolta': { bg: '#E60012', text: '#FFFFFF' }
+};
+
+// Функция для создания SVG изображения принтера с брендом
+const createPrinterSVG = (brand, model) => {
+  const colors = brandColors[brand] || { bg: '#6B7280', text: '#FFFFFF' };
+  
+  // Создаем data URL для SVG изображения
+  const svg = `
+    <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="grad-${brand}" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" style="stop-color:${colors.bg};stop-opacity:1" />
+          <stop offset="100%" style="stop-color:${colors.bg};stop-opacity:0.7" />
+        </linearGradient>
+      </defs>
+      <rect width="400" height="300" fill="url(#grad-${brand})"/>
+      
+      <!-- Иконка принтера -->
+      <g transform="translate(200, 100)">
+        <rect x="-40" y="-20" width="80" height="50" rx="5" fill="${colors.text}" opacity="0.9"/>
+        <rect x="-35" y="-15" width="70" height="40" rx="3" fill="${colors.bg}" opacity="0.3"/>
+        <rect x="-30" y="35" width="60" height="15" rx="2" fill="${colors.text}" opacity="0.8"/>
+        <circle cx="-20" cy="42" r="3" fill="${colors.bg}"/>
+        <circle cx="20" cy="42" r="3" fill="${colors.bg}"/>
+      </g>
+      
+      <!-- Текст бренда -->
+      <text x="200" y="200" font-family="Arial, sans-serif" font-size="32" font-weight="bold" 
+            fill="${colors.text}" text-anchor="middle">${brand}</text>
+      
+      <!-- Текст модели -->
+      <text x="200" y="240" font-family="Arial, sans-serif" font-size="16" 
+            fill="${colors.text}" text-anchor="middle" opacity="0.9">${model.substring(0, 30)}</text>
+    </svg>
+  `.trim();
+  
+  return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`;
+};
 
 // Функция для получения изображения принтера
 export const getPrinterImage = (printer) => {
@@ -17,14 +50,8 @@ export const getPrinterImage = (printer) => {
     return printer.image;
   }
   
-  // Создаём уникальный индекс на основе ID принтера
-  // Это гарантирует, что каждая модель получит своё изображение
-  const hash = printer.id.split('').reduce((acc, char) => {
-    return acc + char.charCodeAt(0);
-  }, 0);
-  
-  const imageIndex = hash % printerImages.length;
-  return printerImages[imageIndex];
+  // Создаём SVG изображение с брендом и моделью
+  return createPrinterSVG(printer.brand, printer.model);
 };
 
 // Данные принтеров из CSV файлов
