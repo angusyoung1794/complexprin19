@@ -2,11 +2,21 @@ import React, { useState } from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { companyInfo } from '../data/mock';
 import CompanyDetailsModal from './CompanyDetailsModal';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Footer = () => {
   const [isDetailsModalOpen, setIsDetailsModalOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollToSection = (sectionId) => {
+    // Если мы не на главной странице, сначала переходим на неё
+    if (location.pathname !== '/') {
+      navigate('/', { state: { scrollTo: sectionId } });
+      return;
+    }
+    
+    // Если мы на главной странице, просто прокручиваем
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
