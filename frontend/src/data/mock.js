@@ -76,25 +76,25 @@ export const commonIssues = [
 export const printerImages = [
   {
     id: 1,
-    url: "/images/printer-hp-allinone.svg",
+    url: "https://customer-assets.emergentagent.com/job_repair-hub-47/artifacts/afv6tv0q_hp.jpg",
     alt: "Профессиональное МФУ HP",
     brand: "HP"
   },
   {
     id: 2,
-    url: "/images/printer-canon-office.svg",
+    url: "https://customer-assets.emergentagent.com/job_repair-hub-47/artifacts/fx5e2xz4_canon.jpeg",
     alt: "Белое офисное копировальное устройство Canon",
     brand: "Canon"
   },
   {
     id: 3,
-    url: "/images/printer-kyocera-professional.svg",
+    url: "https://customer-assets.emergentagent.com/job_repair-hub-47/artifacts/718cg5wq_kyocera.jpeg",
     alt: "Профессиональный принтер Kyocera в офисной среде",
     brand: "Kyocera"
   },
   {
     id: 4,
-    url: "/images/printer-ricoh-color.svg",
+    url: "https://customer-assets.emergentagent.com/job_repair-hub-47/artifacts/2f7kz96d_ricoh.jpeg",
     alt: "Цветной принтер Ricoh для офиса",
     brand: "Ricoh"
   }
