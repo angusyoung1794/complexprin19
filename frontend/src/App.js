@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import UserAgreement from "./pages/UserAgreement";
 import PrinterSelection from "./pages/PrinterSelection";
 import PrinterErrorGuide from "./pages/PrinterErrorGuide";
+import TermsOfService from "./pages/TermsOfService";
 import { Toaster } from "./components/ui/toaster";
 
 const Home = () => {
