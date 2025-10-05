@@ -37,6 +37,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/user-agreement" element={<UserAgreement />} />
           <Route path="/printer-selection" element={<PrinterSelection />} />
+          <Route path="/printer-error-guide" element={<PrinterErrorGuide />} />
         </Routes>
       </BrowserRouter>
       <Toaster />
