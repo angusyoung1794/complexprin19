@@ -273,6 +273,18 @@ test_plan:
   test_all: true
   test_priority: "high_first"
 
+  - task: "Исправить навигацию на странице printer-selection"
+    implemented: true
+    working: true
+    file: "components/Header.jsx, components/Footer.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: false
+    status_history:
+        - working: true
+          agent: "main"
+          comment: "Исправлена навигация в Header и Footer: добавлена поддержка React Router для переходов между страницами. Теперь при клике на ссылки навигации (Главная, Услуги, Оборудование, О нас, Контакты, Заявка на ремонт) со страницы printer-selection происходит переход на главную страницу с автоматической прокруткой к нужной секции."
+
 agent_communication:
     - agent: "main"
       message: "Реализованы все требуемые изменения в форме заявки на ремонт: добавлены новые бренды Pantum и 'Другой бренд', создана модалка с пользовательским соглашением, добавлен обязательный checkbox согласия с валидацией. Установлен React Router для навигации. Backend тестирование завершено успешно. Пользователь будет тестировать frontend вручную."
@@ -282,3 +294,5 @@ agent_communication:
       message: "Backend stability testing completed successfully. Created comprehensive backend_test.py and verified all API endpoints are working correctly. Server is running stable on port 8001, MongoDB connection is functional, all CRUD operations work properly. Email service has minor authentication issue but doesn't affect core API functionality. Backend is stable and ready after frontend changes."
     - agent: "testing"
       message: "Выполнено повторное тестирование стабильности backend после добавления функциональности выбора принтеров. Все основные API endpoints работают корректно (/api/status, /api/repair-requests), MongoDB подключение стабильно, сервер работает на порту 8001 через supervisor. Логи не показывают критических ошибок - только ожидаемая проблема с email аутентификацией в тестовой среде. Backend полностью стабилен и готов к работе."
+    - agent: "main"
+      message: "Исправлена навигация на странице printer-selection. Добавлена поддержка React Router в компоненты Header и Footer для корректных переходов между страницами. Теперь все навигационные ссылки в шапке и футере работают корректно как на главной странице, так и на странице выбора принтеров."
