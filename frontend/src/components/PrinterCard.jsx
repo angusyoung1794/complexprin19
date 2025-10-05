@@ -6,6 +6,11 @@ import { getPrinterImage } from '../data/printers';
 const PrinterCard = ({ printer }) => {
   const [imageError, setImageError] = useState(false);
   const printerImage = getPrinterImage(printer);
+  
+  // Логирование для отладки
+  React.useEffect(() => {
+    console.log(`Printer: ${printer.model}, Image URL: ${printerImage}`);
+  }, [printer.model, printerImage]);
 
   const handleBuyClick = () => {
     const subject = `Запрос на покупку: ${printer.model}`;
