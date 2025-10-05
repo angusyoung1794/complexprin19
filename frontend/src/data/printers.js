@@ -1,24 +1,28 @@
-// Изображения принтеров
-const printerImages = [
-  'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6',
-  'https://images.unsplash.com/photo-1650094980833-7373de26feb6',
-  'https://images.unsplash.com/photo-1650696868612-4b836291b323',
-  'https://images.unsplash.com/photo-1630327722923-5ebd594ddda9',
-  'https://images.unsplash.com/photo-1571845995697-28be270350de'
-];
-
-// Функция для получения изображения принтера на основе его характеристик
+// Функция для получения изображения принтера
+// Использует placeholder.com для генерации уникального изображения для каждой модели
 export const getPrinterImage = (printer) => {
-  // Используем разные изображения в зависимости от категории использования
-  if (printer.usageCategory === 'personal') {
-    return printerImages[0]; // Компактный принтер для дома
-  } else if (printer.usageCategory === 'enterprise') {
-    return printerImages[4]; // Крупный офисный принтер
-  } else {
-    // Для офисного использования выбираем случайное изображение из середины
-    const index = Math.abs(printer.id.charCodeAt(printer.id.length - 1)) % 3 + 1;
-    return printerImages[index];
+  // Если у принтера есть прямая ссылка на изображение, используем её
+  if (printer.image) {
+    return printer.image;
   }
+  
+  // Создаём уникальное изображение на основе модели принтера
+  // Используем разные цвета для разных брендов
+  const brandColors = {
+    'HP': '0096D6',
+    'Canon': 'CC0000',
+    'Kyocera': '009FE3',
+    'Konica Minolta': 'E60012'
+  };
+  
+  const color = brandColors[printer.brand] || '6B7280';
+  const textColor = 'FFFFFF';
+  
+  // Создаём текст для изображения (модель принтера)
+  const displayText = printer.model.replace(/ /g, '+');
+  
+  // Генерируем уникальное placeholder изображение с названием модели
+  return `https://via.placeholder.com/400x300/${color}/${textColor}?text=${displayText}`;
 };
 
 // Данные принтеров из CSV файлов
