@@ -1,3 +1,26 @@
+// Изображения принтеров
+const printerImages = [
+  'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6',
+  'https://images.unsplash.com/photo-1650094980833-7373de26feb6',
+  'https://images.unsplash.com/photo-1650696868612-4b836291b323',
+  'https://images.unsplash.com/photo-1630327722923-5ebd594ddda9',
+  'https://images.unsplash.com/photo-1571845995697-28be270350de'
+];
+
+// Функция для получения изображения принтера на основе его характеристик
+export const getPrinterImage = (printer) => {
+  // Используем разные изображения в зависимости от категории использования
+  if (printer.usageCategory === 'personal') {
+    return printerImages[0]; // Компактный принтер для дома
+  } else if (printer.usageCategory === 'enterprise') {
+    return printerImages[4]; // Крупный офисный принтер
+  } else {
+    // Для офисного использования выбираем случайное изображение из середины
+    const index = Math.abs(printer.id.charCodeAt(printer.id.length - 1)) % 3 + 1;
+    return printerImages[index];
+  }
+};
+
 // Данные принтеров из CSV файлов
 export const printersData = {
   hp: [
