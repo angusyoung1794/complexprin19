@@ -1,28 +1,30 @@
+// Коллекция реальных изображений принтеров
+const printerImages = [
+  'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400&h=300&fit=crop', // HP all-in-one
+  'https://images.unsplash.com/photo-1650094980833-7373de26feb6?w=400&h=300&fit=crop', // White & black office
+  'https://images.unsplash.com/photo-1650696868612-4b836291b323?w=400&h=300&fit=crop', // White on table
+  'https://images.unsplash.com/photo-1630327722923-5ebd594ddda9?w=400&h=300&fit=crop', // White & gray
+  'https://images.unsplash.com/photo-1571845995697-28be270350de?w=400&h=300&fit=crop', // Beige printer
+  'https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=400&h=300&fit=crop&sat=-100', // Grayscale variant 1
+  'https://images.unsplash.com/photo-1650094980833-7373de26feb6?w=400&h=300&fit=crop&sat=-100', // Grayscale variant 2
+  'https://images.unsplash.com/photo-1650696868612-4b836291b323?w=400&h=300&fit=crop&sat=-100', // Grayscale variant 3
+];
+
 // Функция для получения изображения принтера
-// Использует placeholder.com для генерации уникального изображения для каждой модели
 export const getPrinterImage = (printer) => {
   // Если у принтера есть прямая ссылка на изображение, используем её
   if (printer.image) {
     return printer.image;
   }
   
-  // Создаём уникальное изображение на основе модели принтера
-  // Используем разные цвета для разных брендов
-  const brandColors = {
-    'HP': '0096D6',
-    'Canon': 'CC0000',
-    'Kyocera': '009FE3',
-    'Konica Minolta': 'E60012'
-  };
+  // Создаём уникальный индекс на основе ID принтера
+  // Это гарантирует, что каждая модель получит своё изображение
+  const hash = printer.id.split('').reduce((acc, char) => {
+    return acc + char.charCodeAt(0);
+  }, 0);
   
-  const color = brandColors[printer.brand] || '6B7280';
-  const textColor = 'FFFFFF';
-  
-  // Создаём текст для изображения (модель принтера)
-  const displayText = printer.model.replace(/ /g, '+');
-  
-  // Генерируем уникальное placeholder изображение с названием модели
-  return `https://via.placeholder.com/400x300/${color}/${textColor}?text=${displayText}`;
+  const imageIndex = hash % printerImages.length;
+  return printerImages[imageIndex];
 };
 
 // Данные принтеров из CSV файлов
