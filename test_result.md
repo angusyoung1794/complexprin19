@@ -264,7 +264,7 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Исправить навигацию на странице printer-selection"
+    - "Добавить страницу гида по ошибкам принтеров"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
