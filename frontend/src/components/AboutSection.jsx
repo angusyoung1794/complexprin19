@@ -95,8 +95,37 @@ const AboutSection = () => {
           </div>
         </div>
 
+        {/* Printer Error Guide Link */}
+        <div className="mt-16 mb-8">
+          <a 
+            href="/printer-error-guide"
+            className="block bg-white rounded-3xl p-8 lg:p-12 text-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 border-transparent hover:border-purple-500 group"
+          >
+            <div className="flex items-center justify-center mb-4">
+              <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                <span className="text-white text-3xl">🖨️</span>
+              </div>
+              <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <span className="text-white text-3xl">⚠️</span>
+              </div>
+            </div>
+            <h3 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors">
+              Не печатает принтер? Гид по ошибкам...
+            </h3>
+            <p className="text-xl text-gray-600 mb-4 max-w-3xl mx-auto">
+              Подробные инструкции по устранению самых распространённых ошибок HP, Canon и Kyocera
+            </p>
+            <span className="inline-flex items-center text-purple-600 font-semibold text-lg group-hover:text-pink-500 transition-colors">
+              Открыть полный гид
+              <svg className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </span>
+          </a>
+        </div>
+
         {/* Experience Highlight */}
-        <div className="mt-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-3xl p-8 lg:p-12 text-white text-center">
+        <div className="mt-8 bg-gradient-to-r from-pink-500 to-purple-600 rounded-3xl p-8 lg:p-12 text-white text-center">
           <h3 className="text-3xl font-bold mb-4">Обширный опыт работы в сервисных центрах</h3>
           <p className="text-xl opacity-90 mb-6 max-w-3xl mx-auto">
             Наши техники накопили ценный опыт работы в официальных сервисных центрах HP, Ricoh, Canon и Kyocera, обеспечивая ремонт высочайшего качества с использованием оригинальных деталей и проверенных методов.
