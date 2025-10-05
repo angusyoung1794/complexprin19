@@ -138,7 +138,12 @@ const Footer = () => {
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <span className="text-gray-400 text-sm">Политика конфиденциальности</span>
-              <span className="text-gray-400 text-sm">Условия обслуживания</span>
+              <a 
+                href="/terms-of-service"
+                className="text-gray-400 text-sm hover:text-pink-400 transition-colors duration-200"
+              >
+                Условия обслуживания
+              </a>
               <button 
                 onClick={() => setIsDetailsModalOpen(true)}
                 className="text-gray-400 text-sm hover:text-pink-400 transition-colors duration-200"
