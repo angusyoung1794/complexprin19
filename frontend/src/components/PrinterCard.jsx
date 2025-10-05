@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent } from './ui/card';
 import { Badge } from './ui/badge';
+import { getPrinterImage } from '../data/printers';
 
 const PrinterCard = ({ printer }) => {
+  const [imageError, setImageError] = useState(false);
+  const printerImage = getPrinterImage(printer);
+
   const handleBuyClick = () => {
     const subject = `Запрос на покупку: ${printer.model}`;
     const body = `Здравствуйте!
@@ -29,18 +33,34 @@ ${printer.colorSpeed ? `- Скорость цветной печати: ${printe
 
   return (
     <Card className="group overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 h-full">
+      {/* Изображение принтера */}
+      <div className="relative h-48 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
+        {!imageError ? (
+          <img 
+            src={printerImage}
+            alt={printer.model}
+            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            onError={() => setImageError(true)}
+          />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center">
+            <span className="text-6xl">🖨️</span>
+          </div>
+        )}
+        <div className="absolute top-3 right-3">
+          <Badge className="bg-white/90 backdrop-blur-sm text-purple-700 shadow-lg">
+            {printer.brand}
+          </Badge>
+        </div>
+      </div>
+
       <CardContent className="p-6 flex flex-col h-full">
         {/* Заголовок */}
-        <div className="flex items-start justify-between mb-4">
-          <div className="flex-1">
-            <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
-              {printer.model}
-            </h3>
-            <Badge className="bg-gradient-to-r from-pink-100 to-purple-100 text-pink-700 hover:from-pink-200 hover:to-purple-200 mb-2">
-              {printer.brand}
-            </Badge>
-          </div>
-          <div className="text-2xl">🖨️</div>
+        <div className="mb-4">
+          <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+            {printer.model}
+          </h3>
+          <span className="text-sm text-gray-500">{printer.category}</span>
         </div>
 
         {/* Характеристики */}
