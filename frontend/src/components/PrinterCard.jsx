@@ -37,9 +37,9 @@ ${printer.colorSpeed ? `- Скорость цветной печати: ${printe
   };
 
   return (
-    <Card className="group overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 h-full">
+    <Card className="group overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full">
       {/* Изображение принтера */}
-      <div className="relative h-48 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden">
+      <div className="relative h-48 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden flex-shrink-0">
         {!imageError ? (
           <img 
             src={printerImage}
@@ -68,7 +68,7 @@ ${printer.colorSpeed ? `- Скорость цветной печати: ${printe
         </div>
       </div>
 
-      <CardContent className="p-6 flex flex-col h-full">
+      <CardContent className="p-6 flex flex-col flex-1">
         {/* Заголовок */}
         <div className="mb-4">
           <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
