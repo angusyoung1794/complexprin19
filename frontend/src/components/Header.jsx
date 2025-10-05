@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Button } from './ui/button';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,12 +18,34 @@ const Header = () => {
   }, []);
 
   const scrollToSection = (sectionId) => {
+    // Если мы не на главной странице, сначала переходим на неё
+    if (location.pathname !== '/') {
+      navigate('/', { state: { scrollTo: sectionId } });
+      setIsMenuOpen(false);
+      return;
+    }
+    
+    // Если мы на главной странице, просто прокручиваем
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
       setIsMenuOpen(false);
     }
   };
+  
+  // Прокручиваем к нужной секции после перехода на главную страницу
+  useEffect(() => {
+    if (location.state?.scrollTo && location.pathname === '/') {
+      const element = document.getElementById(location.state.scrollTo);
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+      // Очищаем state после прокрутки
+      window.history.replaceState({}, document.title);
+    }
+  }, [location]);
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
