@@ -45,11 +45,20 @@ ${printer.colorSpeed ? `- Скорость цветной печати: ${printe
             src={printerImage}
             alt={printer.model}
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-            onError={() => setImageError(true)}
+            onError={(e) => {
+              console.error(`Failed to load image for ${printer.model}:`, printerImage, e);
+              setImageError(true);
+            }}
+            onLoad={() => {
+              console.log(`Successfully loaded image for ${printer.model}`);
+            }}
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center">
-            <span className="text-6xl">🖨️</span>
+          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
+            <div className="text-center">
+              <span className="text-6xl mb-2 block">🖨️</span>
+              <span className="text-xs text-gray-500">{printer.brand}</span>
+            </div>
           </div>
         )}
         <div className="absolute top-3 right-3">
