@@ -39,6 +39,7 @@ function App() {
           <Route path="/user-agreement" element={<UserAgreement />} />
           <Route path="/printer-selection" element={<PrinterSelection />} />
           <Route path="/printer-error-guide" element={<PrinterErrorGuide />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
         </Routes>
       </BrowserRouter>
       <Toaster />
