@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Параметры, которые не должны влиять на индексацию (Яндекс)
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&utm_referrer&gclid&yclid&fbclid /
+
+Host: complexprint.ru
+Sitemap: https://complexprint.ru/sitemap.xml

@@ -3,12 +3,77 @@ import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { Badge } from '../components/ui/badge';
+import { Helmet } from 'react-helmet-async';
 
 const PrinterErrorGuide = () => {
   const navigate = useNavigate();
 
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "Принтер не захватывает бумагу — что делать?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Проверьте состояние роликов захвата и наличие посторонних предметов в тракте бумаги. Очистите ролики изопропиловым спиртом. Если износ сильный — требуется замена роликов. Мы можем выполнить диагностику и замену в день обращения.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Полосы или пятна на печати — как исправить?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Часто причина в картридже или узле печки (fuser). Попробуйте заменить картридж на заведомо исправный. Если не помогло — нужна диагностика узла печки. Мы используем оригинальные запчасти и предоставляем гарантию.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Принтер заминает бумагу — как устранить?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Проверьте соответствие плотности бумаги, состояние направляющих лотка и чистоту тракта. Часто требуется чистка, замена термоплёнки или валов. Наш мастер оценит износ и выполнит ремонт на месте.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Стоит ли ремонтировать старый лазерный принтер?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Если стоимость ремонта менее 40–50% цены аналогичной новой модели — ремонт оправдан. Мы предложим смету ремонта и альтернативу по подбору новой техники, если ремонт экономически нецелесообразен.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Сколько стоит выезд мастера по Москве?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Диагностика от 3000₽ с учётом выезда. Точная стоимость после первичной оценки по телефону/мессенджеру и осмотра. При дальнейшем ремонте диагностика часто включается в итоговую стоимость.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Какая гарантия на ремонт?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Гарантия 6 месяцев на выполненные работы и установленные запчасти при соблюдении условий эксплуатации.",
+        },
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+      <Helmet>
+        <title>Не печатает принтер? Гид по ошибкам HP, Canon, Kyocera | ComplexPrint — инструкции и помощь</title>
+        <meta
+          name="description"
+          content="Пошаговые решения популярных проблем: замятие бумаги, полосы на печати, нет захвата, коды ошибок. Когда можно исправить самому, а когда вызывать мастера. Москва и МО."
+        />
+        <link rel="canonical" href="https://complexprint.ru/printer-error-guide" />
+        <script type="application/ld+json">{JSON.stringify(faqJsonLd)}</script>
+      </Helmet>
       <Header />
       
       <main className="pt-20">
@@ -301,7 +366,8 @@ const PrinterErrorGuide = () => {
 
                     <div className="border-l-4 border-blue-500 pl-4">
                       <h4 className="font-bold text-gray-900"><code className="bg-gray-100 px-2 py-1 rounded">C7000 / C70xx</code> - Ошибка сканера</h4>
-                      <p className="text-gray-700 mt-2"><strong>Причина:</strong> Сканер не может найти начальную позицию (Home Position Error).</p>
+                      <p className="text-gray-700 mt-2"><strong>Причина:</strong> Сканер не может найти начальную позицию (Home Position Error).
+                      </p>
                       <p className="text-gray-700 mt-2"><strong>Решение:</strong> Перезагрузка. Проверить, нет ли посторонних предметов на стекле или под ним. Неисправен датчик или мотор сканера. Требуется чистка и смазка направляющих, замена датчика.</p>
                     </div>
                   </div>

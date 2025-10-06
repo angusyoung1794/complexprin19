@@ -13,10 +13,60 @@ import PrinterSelection from "./pages/PrinterSelection";
 import PrinterErrorGuide from "./pages/PrinterErrorGuide";
 import TermsOfService from "./pages/TermsOfService";
 import { Toaster } from "./components/ui/toaster";
+import { Helmet } from "react-helmet-async";
+import HpRepair from "./pages/brands/HpRepair";
+import CanonRepair from "./pages/brands/CanonRepair";
+import KyoceraRepair from "./pages/brands/KyoceraRepair";
+import RicohRepair from "./pages/brands/RicohRepair";
 
 const Home = () => {
+  const localBusinessJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "Комплекс Принт",
+    alternateName: "ComplexPrint",
+    url: "https://complexprint.ru/",
+    telephone: "+7-495-103-14-68",
+    email: "9104297686@outlook.com",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "RU",
+      addressLocality: "Москва",
+      streetAddress: "Абрамцевская 11 к1 стр3",
+    },
+    areaServed: ["Москва", "Московская область"],
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+        ],
+        opens: "09:00",
+        closes: "18:00",
+      },
+    ],
+    priceRange: "₽₽",
+    description:
+      "Профессиональный ремонт и обслуживание лазерных принтеров и МФУ в Москве и МО. Выезд мастера, оригинальные запчасти, гарантия 6 месяцев.",
+  };
+
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>
+          Ремонт принтеров в Москве с выездом | ComplexPrint — HP, Canon, Kyocera, Ricoh. Гарантия 6 месяцев
+        </title>
+        <meta
+          name="description"
+          content="Профессиональный ремонт и обслуживание лазерных принтеров и МФУ в Москве и МО. Выезд мастера в день обращения, оригинальные запчасти, договор и гарантия 6 месяцев. HP, Canon, Kyocera, Ricoh. Приём заявок 24/7."
+        />
+        <link rel="canonical" href="https://complexprint.ru/" />
+        <script type="application/ld+json">{JSON.stringify(localBusinessJsonLd)}</script>
+      </Helmet>
       <Header />
       <main>
         <HeroSection />
@@ -40,6 +90,10 @@ function App() {
           <Route path="/printer-selection" element={<PrinterSelection />} />
           <Route path="/printer-error-guide" element={<PrinterErrorGuide />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/remont-printerov-hp" element={<HpRepair />} />
+          <Route path="/remont-printerov-canon" element={<CanonRepair />} />
+          <Route path="/remont-printerov-kyocera" element={<KyoceraRepair />} />
+          <Route path="/remont-printerov-ricoh" element={<RicohRepair />} />
         </Routes>
       </BrowserRouter>
       <Toaster />
