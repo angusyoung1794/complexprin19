@@ -18,6 +18,10 @@ import HpRepair from "./pages/brands/HpRepair";
 import CanonRepair from "./pages/brands/CanonRepair";
 import KyoceraRepair from "./pages/brands/KyoceraRepair";
 import RicohRepair from "./pages/brands/RicohRepair";
+import KonicaMinoltaRepair from "./pages/brands/KonicaMinoltaRepair";
+import XeroxRepair from "./pages/brands/XeroxRepair";
+import Pricing from "./pages/Pricing";
+import Districts from "./pages/Districts";
 
 const Home = () => {
   const localBusinessJsonLd = {
@@ -38,13 +42,7 @@ const Home = () => {
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-        ],
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
         opens: "09:00",
         closes: "18:00",
       },
@@ -57,13 +55,8 @@ const Home = () => {
   return (
     <div className="min-h-screen">
       <Helmet>
-        <title>
-          Ремонт принтеров в Москве с выездом | ComplexPrint — HP, Canon, Kyocera, Ricoh. Гарантия 6 месяцев
-        </title>
-        <meta
-          name="description"
-          content="Профессиональный ремонт и обслуживание лазерных принтеров и МФУ в Москве и МО. Выезд мастера в день обращения, оригинальные запчасти, договор и гарантия 6 месяцев. HP, Canon, Kyocera, Ricoh. Приём заявок 24/7."
-        />
+        <title>Ремонт принтеров в Москве с выездом | ComplexPrint — HP, Canon, Kyocera, Ricoh. Гарантия 6 месяцев</title>
+        <meta name="description" content="Профессиональный ремонт и обслуживание лазерных принтеров и МФУ в Москве и МО. Выезд мастера в день обращения, оригинальные запчасти, договор и гарантия 6 месяцев. HP, Canon, Kyocera, Ricoh. Приём заявок 24/7." />
         <link rel="canonical" href="https://complexprint.ru/" />
         <script type="application/ld+json">{JSON.stringify(localBusinessJsonLd)}</script>
       </Helmet>
@@ -94,6 +87,10 @@ function App() {
           <Route path="/remont-printerov-canon" element={<CanonRepair />} />
           <Route path="/remont-printerov-kyocera" element={<KyoceraRepair />} />
           <Route path="/remont-printerov-ricoh" element={<RicohRepair />} />
+          <Route path="/remont-printerov-konica-minolta" element={<KonicaMinoltaRepair />} />
+          <Route path="/remont-printerov-xerox" element={<XeroxRepair />} />
+          <Route path="/ceny" element={<Pricing />} />
+          <Route path="/rayony-moskvy" element={<Districts />} />
         </Routes>
       </BrowserRouter>
       <Toaster />
