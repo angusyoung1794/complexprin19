@@ -1,7 +1,11 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
 
 export default function Pricing() {
+  const navigate = useNavigate();
+  const goRepairForm = () => navigate('/', { state: { scrollTo: 'repair-request' } });
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
       <Helmet>
@@ -25,7 +29,7 @@ export default function Pricing() {
               <li>Первичная оценка по телефону</li>
               <li>Смета работ до начала ремонта</li>
             </ul>
-            <a href="/" className="inline-block bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold">Заказать</a>
+            <button onClick={goRepairForm} className="inline-block bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold">Заказать</button>
           </div>
 
           <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-pink-400">
@@ -36,7 +40,7 @@ export default function Pricing() {
               <li>Ремонт в день обращения</li>
               <li>Гарантия 6 месяцев</li>
             </ul>
-            <a href="/" className="inline-block bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold">Вызвать мастера</a>
+            <button onClick={goRepairForm} className="inline-block bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold">Вызвать мастера</button>
           </div>
 
           <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
@@ -47,7 +51,7 @@ export default function Pricing() {
               <li>Приоритетный выезд</li>
               <li>Оптимизация затрат</li>
             </ul>
-            <a href="/" className="inline-block bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold">Оставить заявку</a>
+            <button onClick={goRepairForm} className="inline-block bg-gradient-to-r from-pink-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold">Оставить заявку</button>
           </div>
         </div>
 
