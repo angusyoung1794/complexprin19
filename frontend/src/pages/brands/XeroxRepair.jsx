@@ -47,12 +47,13 @@ export default function XeroxRepair() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Ремонт принтеров и МФУ Xerox в Москве</h1>
           <p className="text-lg text-gray-700 mb-6">Линейки VersaLink, WorkCentre, Phaser — диагностика, ремонт, профилактика. Гарантия 6 месяцев.</p>
 
-          <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">Типовые неисправности Xerox</h2>
-            <ul className="list-disc list-inside space-y-2 text-gray-700">
-              <li>Замятия бумаги: ролики, направляющие, датчики</li>
-              <li>Дефекты печати: картриджи, девелопер, печка</li>
-              <li>Ошибки контроллера и сканера</li>
+          {/* Callout */}
+          <section className="mb-10 rounded-2xl border border-pink-200 bg-gradient-to-br from-pink-50 to-purple-50 p-6">
+            <h2 className="text-2xl font-semibold mb-3">Частые проблемы Xerox — быстрое решение</h2>
+            <ul className="list-disc list-inside space-y-2 text-gray-800">
+              <li><strong>Замятия</strong> — восстановление тракта, замена роликов/датчиков.</li>
+              <li><strong>Дефекты печати</strong> — диагностика картриджей/девелопера/печки.</li>
+              <li><strong>Ошибки контроллера/сканера</strong> — проверка датчиков, калибровки и прошивок.</li>
             </ul>
           </section>
 

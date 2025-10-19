@@ -53,13 +53,14 @@ export default function RicohRepair() {
             Линейки Ricoh Aficio, MP, SP, IM — диагностика, ремонт, настройка. Гарантия 6 месяцев.
           </p>
 
-          <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">Типовые неисправности Ricoh</h2>
-            <ul className="list-disc list-inside space-y-2 text-gray-700">
-              <li>Замятие бумаги: ролики подачи/вывода, направляющие, датчики</li>
-              <li>Дефекты печати: серый фон, повтор точек, полосы</li>
-              <li>Ошибки печки/фиксации (fuser), проблемы с прогревом</li>
-              <li>Сетевые и скан-функции МФУ (SMB/SMTP)</li>
+          {/* Callout */}
+          <section className="mb-10 rounded-2xl border border-pink-200 bg-gradient-to-br from-pink-50 to-purple-50 p-6">
+            <h2 className="text-2xl font-semibold mb-3">Частые проблемы Ricoh — быстрое решение</h2>
+            <ul className="list-disc list-inside space-y-2 text-gray-800">
+              <li><strong>Замятия</strong> — обслуживание тракта, замена роликов/датчиков подачи.</li>
+              <li><strong>Дефекты печати</strong> — диагностика девелопера/печки, настройка плотности.</li>
+              <li><strong>Ошибки фиксации</strong> — ремонт/замена fuser, проверка прогрева.</li>
+              <li><strong>Сетевые/скан-функции</strong> — настройка SMB/SMTP, права и протоколы.</li>
             </ul>
           </section>
 

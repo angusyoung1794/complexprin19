@@ -51,12 +51,14 @@ export default function CanonRepair() {
             Специализация на i-SENSYS, imageRUNNER, imageCLASS. Оригинальные запчасти и гарантия 6 месяцев.
           </p>
 
-          <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">Типовые неисправности Canon</h2>
-            <ul className="list-disc list-inside space-y-2 text-gray-700">
-              <li>Полосы/пятна, серый фон: картридж, оптика, узел закрепления</li>
-              <li>Замятия и ошибки подачи бумаги</li>
-              <li>Ошибки фиксации/прогрева</li>
+          {/* Callout */}
+          <section className="mb-10 rounded-2xl border border-pink-200 bg-gradient-to-br from-pink-50 to-purple-50 p-6">
+            <h2 className="text-2xl font-semibold mb-3">Частые проблемы Canon — быстрое решение</h2>
+            <ul className="list-disc list-inside space-y-2 text-gray-800">
+              <li><strong>Ошибки термоузла (E000/E001/E002/E003)</strong> — диагностика, ремонт/замена печки.</li>
+              <li><strong>Несовместимый картридж (E050)</strong> — чистка/замена, проверка контактов чипа.</li>
+              <li><strong>Коды B2xx/регистрация бумаги</strong> — проверка датчиков, узла подачи и захвата.</li>
+              <li><strong>Полосы/серый фон</strong> — картридж, оптика, узел закрепления.</li>
             </ul>
           </section>
 

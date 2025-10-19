@@ -53,13 +53,14 @@ export default function HpRepair() {
             Обслуживаем HP LaserJet, Enterprise, Pro и МФУ. Диагностика в день обращения, оригинальные запчасти, гарантия 6 месяцев.
           </p>
 
-          <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">Типовые неисправности HP</h2>
-            <ul className="list-disc list-inside space-y-2 text-gray-700">
-              <li>Замятие бумаги: ролики, разделители, направляющие</li>
-              <li>Полосы/пятна, серый фон: картридж, узел закрепления</li>
-              <li>Шумы, скрипы: шестерни, приводные узлы</li>
-              <li>Коды ошибок 50.x (печка), 13.x (замятия), 59.x (привод)</li>
+          {/* Callout */}
+          <section className="mb-10 rounded-2xl border border-pink-200 bg-gradient-to-br from-pink-50 to-purple-50 p-6">
+            <h2 className="text-2xl font-semibold mb-3">Частые проблемы HP — быстрое решение</h2>
+            <ul className="list-disc list-inside space-y-2 text-gray-800">
+              <li><strong>Ошибка 50.x (Fuser)</strong> — ремонт/замена узла закрепления, без лишних замен модулей.</li>
+              <li><strong>Ошибка 13.x (Paper Jam)</strong> — восстановление тракта, замена роликов/датчиков подачи.</li>
+              <li><strong>Ошибка 59.x (Привод)</strong> — диагностика/ремонт узла привода, корректировка шестерён.</li>
+              <li><strong>Серый фон, полосы</strong> — проверка картриджа, чистка/ремонт печки, настройка.</li>
             </ul>
           </section>
 

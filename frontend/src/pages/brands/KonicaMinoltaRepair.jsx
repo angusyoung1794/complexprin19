@@ -47,12 +47,13 @@ export default function KonicaMinoltaRepair() {
           <h1 className="text-4xl font-bold text-gray-900 mb-6">Ремонт принтеров и МФУ Konica Minolta в Москве</h1>
           <p className="text-lg text-gray-700 mb-6">Линейки bizhub и Accurio — диагностика, ремонт, профилактика и настройка. Гарантия 6 месяцев.</p>
 
-          <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">Типовые неисправности Konica Minolta</h2>
-            <ul className="list-disc list-inside space-y-2 text-gray-700">
-              <li>Замятия бумаги: ролики подачи/вывода, направляющие</li>
-              <li>Дефекты печати: девелопер, фотобарабан, печка</li>
-              <li>Ошибки контроллера, сетевые/скан-функции</li>
+          {/* Callout */}
+          <section className="mb-10 rounded-2xl border border-pink-200 bg-gradient-to-br from-pink-50 to-purple-50 p-6">
+            <h2 className="text-2xl font-semibold mb-3">Частые проблемы Konica Minolta — быстрое решение</h2>
+            <ul className="list-disc list-inside space-y-2 text-gray-800">
+              <li><strong>Замятия бумаги</strong> — восстановление тракта, замена роликов/направляющих.</li>
+              <li><strong>Дефекты печати</strong> — диагностика девелопера/фотоузла/печки.</li>
+              <li><strong>Ошибки контроллера/сканера</strong> — проверка датчиков, прошивки, сетевых ролей.</li>
             </ul>
           </section>
 
