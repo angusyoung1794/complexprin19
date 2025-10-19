@@ -1,7 +1,11 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
 
 export default function XeroxRepair() {
+  const navigate = useNavigate();
+  const goRepairForm = () => navigate('/', { state: { scrollTo: 'repair-request' } });
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -65,7 +69,7 @@ export default function XeroxRepair() {
           <section className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl p-6 text-white">
             <h3 className="text-xl font-semibold mb-2">Нужна помощь сейчас?</h3>
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href="/" className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold">Заказать ремонт</a>
+              <button onClick={goRepairForm} className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold">Заказать ремонт</button>
               <a href="tel:+74951031468" className="bg-white/20 text-white px-6 py-3 rounded-lg font-semibold">+7 495 103-14-68</a>
             </div>
           </section>

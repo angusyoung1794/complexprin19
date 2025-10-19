@@ -1,7 +1,11 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
 
 export default function KyoceraRepair() {
+  const navigate = useNavigate();
+  const goRepairForm = () => navigate('/', { state: { scrollTo: 'repair-request' } });
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -48,6 +52,15 @@ export default function KyoceraRepair() {
           </p>
 
           <section className="mb-10">
+            <h2 className="text-2xl font-semibold mb-4">Устраняем проблемы</h2>
+            <p className="text-gray-700 mb-4">Имея огромный опыт и используя наработанные уникальные технологии, устраняем распространённые проблемы принтеров Kyocera TASKalfa.</p>
+            <ul className="list-disc list-inside space-y-2 text-gray-700">
+              <li><strong>TASKAlfa-3252/2553/3554</strong> — трещит, ошибка <code>С2840</code>. Решаем проблему без замены ленты переноса.</li>
+              <li><strong>Kyocera TASKalfa 4002i / 5002i / 6002 / 4003i / 5003i / 6003i</strong> — ошибки <code>C7301</code>. Есть решение без замены блоков проявки и хоппера.</li>
+            </ul>
+          </section>
+
+          <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-4">Типовые неисправности Kyocera</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-700">
               <li>Подача/замятия: ролики подачи/вывода, направляющие</li>
@@ -68,9 +81,9 @@ export default function KyoceraRepair() {
           <section className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl p-6 text-white">
             <h3 className="text-xl font-semibold mb-2">Нужна помощь сейчас?</h3>
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href="/" className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold">
+              <button onClick={goRepairForm} className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold">
                 Заказать ремонт
-              </a>
+              </button>
               <a href="tel:+74951031468" className="bg-white/20 text-white px-6 py-3 rounded-lg font-semibold">
                 +7 495 103-14-68
               </a>

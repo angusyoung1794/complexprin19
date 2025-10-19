@@ -1,7 +1,11 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
 
 export default function HpRepair() {
+  const navigate = useNavigate();
+  const goRepairForm = () => navigate('/', { state: { scrollTo: 'repair-request' } });
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Service",
@@ -73,9 +77,9 @@ export default function HpRepair() {
             <h3 className="text-xl font-semibold mb-2">Нужна помощь сейчас?</h3>
             <p className="mb-4">Оставьте заявку — приедем в день обращения.</p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href="/" className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold">
+              <button onClick={goRepairForm} className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold">
                 Заказать ремонт
-              </a>
+              </button>
               <a href="tel:+74951031468" className="bg-white/20 text-white px-6 py-3 rounded-lg font-semibold">
                 +7 495 103-14-68
               </a>

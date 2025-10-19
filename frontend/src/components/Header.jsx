@@ -42,8 +42,13 @@ const Header = () => {
     }
   }, [location]);
 
-  const go = (path) => {
-    navigate(path);
+  const goHome = () => {
+    navigate('/');
+    setIsMenuOpen(false);
+  };
+
+  const openTelegram = () => {
+    window.open('https://t.me/complexprint_mos', '_blank', 'noopener');
     setIsMenuOpen(false);
   };
 
@@ -54,7 +59,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
-          <div className="flex items-center space-x-2 cursor-pointer" onClick={() => go('/') }>
+          <div className="flex items-center space-x-2 cursor-pointer" onClick={goHome}>
             <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">PC</span>
             </div>
@@ -70,16 +75,8 @@ const Header = () => {
             <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">Услуги</button>
             <button onClick={() => scrollToSection('equipment')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">Оборудование</button>
             <button onClick={() => scrollToSection('about')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">О нас</button>
-            <button onClick={() => scrollToSection('contact')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">Контакты</button>
-            {/* Brand links */}
-            <button onClick={() => go('/remont-printerov-hp')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">HP</button>
-            <button onClick={() => go('/remont-printerov-canon')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">Canon</button>
-            <button onClick={() => go('/remont-printerov-kyocera')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">Kyocera</button>
-            <button onClick={() => go('/remont-printerov-ricoh')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">Ricoh</button>
-            <button onClick={() => go('/remont-printerov-konica-minolta')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">Konica Minolta</button>
-            <button onClick={() => go('/remont-printerov-xerox')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">Xerox</button>
-            <button onClick={() => go('/ceny')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">Цены</button>
-            <button onClick={() => go('/rayony-moskvy')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">Районы</button>
+            {/* Контакты ведет в Telegram */}
+            <button onClick={openTelegram} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">Контакты</button>
           </nav>
 
           {/* Contact Info */}
@@ -110,17 +107,7 @@ const Header = () => {
               <button onClick={() => scrollToSection('services')} className="px-4 py-3 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">Услуги</button>
               <button onClick={() => scrollToSection('equipment')} className="px-4 py-3 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">Оборудование</button>
               <button onClick={() => scrollToSection('about')} className="px-4 py-3 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">О нас</button>
-              <button onClick={() => scrollToSection('contact')} className="px-4 py-3 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">Контакты</button>
-              <div className="px-4 pt-2 pb-1 text-xs uppercase tracking-wide text-gray-400">Бренды</div>
-              <button onClick={() => go('/remont-printerov-hp')} className="px-4 py-2 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600">HP</button>
-              <button onClick={() => go('/remont-printerov-canon')} className="px-4 py-2 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600">Canon</button>
-              <button onClick={() => go('/remont-printerov-kyocera')} className="px-4 py-2 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600">Kyocera</button>
-              <button onClick={() => go('/remont-printerov-ricoh')} className="px-4 py-2 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600">Ricoh</button>
-              <button onClick={() => go('/remont-printerov-konica-minolta')} className="px-4 py-2 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600">Konica Minolta</button>
-              <button onClick={() => go('/remont-printerov-xerox')} className="px-4 py-2 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600">Xerox</button>
-              <div className="px-4 pt-2 pb-1 text-xs uppercase tracking-wide text-gray-400">Дополнительно</div>
-              <button onClick={() => go('/ceny')} className="px-4 py-2 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600">Цены</button>
-              <button onClick={() => go('/rayony-moskvy')} className="px-4 py-2 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600">Районы</button>
+              <button onClick={openTelegram} className="px-4 py-3 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">Контакты</button>
               <div className="px-4 py-3 border-t">
                 <div className="flex items-center space-x-2 text-sm text-gray-600 mb-3">
                   <Phone size={16} className="text-pink-500" />
