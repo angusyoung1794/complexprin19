@@ -65,6 +65,9 @@ const Footer = () => {
               <button onClick={() => scrollToSection('equipment')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left">Оборудование</button>
               <button onClick={() => scrollToSection('about')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left">О нас</button>
               <button onClick={() => scrollToSection('repair-request')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left">Заявка на ремонт</button>
+              <a href="https://t.me/complexprint_mos" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200">
+                Контакты (Telegram)
+              </a>
               <button onClick={() => setIsDetailsModalOpen(true)} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left font-medium">Реквизиты</button>
             </nav>
           </div>
@@ -90,6 +93,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">© 2025 {companyInfo.name}. Все права защищены.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
+              <a href="https://t.me/complexprint_mos" target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm hover:text-pink-400 transition-colors duration-200">Контакты (Telegram)</a>
               <span className="text-gray-400 text-sm">Политика конфиденциальности</span>
               <a href="/terms-of-service" className="text-gray-400 text-sm hover:text-pink-400 transition-colors duration-200">Условия обслуживания</a>
               <button onClick={() => setIsDetailsModalOpen(true)} className="text-gray-400 text-sm hover:text-pink-400 transition-colors duration-200">Реквизиты компании</button>

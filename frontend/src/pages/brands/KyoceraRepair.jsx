@@ -38,10 +38,8 @@ export default function KyoceraRepair() {
           name="description"
           content="Ремонт и обслуживание принтеров Kyocera в Москве и МО: замена узлов, профилактика, устранение ошибок, оригинальные детали. Выезд мастера, гарантия 6 месяцев."
         />
-        <link rel="canonical" href="https://complexprint.ru/remont-printerov-kyocera" />
-        <script type="application/ld+json">
-          {JSON.stringify(jsonLd)}
-        </script>
+        <link rel="canonical" href="https://complexprint.ru/remонт-printerov-kyocera" />
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
       <main className="min-h-screen bg-gradient-to-br from-gray-50 to-white py-16">
@@ -51,12 +49,21 @@ export default function KyoceraRepair() {
             ECOSYS, TASKalfa — ремонт, профилактика, настройка. Гарантия 6 месяцев.
           </p>
 
-          <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">Устраняем проблемы</h2>
-            <p className="text-gray-700 mb-4">Имея огромный опыт и используя наработанные уникальные технологии, устраняем распространённые проблемы принтеров Kyocera TASKalfa.</p>
-            <ul className="list-disc list-inside space-y-2 text-gray-700">
-              <li><strong>TASKAlfa-3252/2553/3554</strong> — трещит, ошибка <code>С2840</code>. Решаем проблему без замены ленты переноса.</li>
-              <li><strong>Kyocera TASKalfa 4002i / 5002i / 6002 / 4003i / 5003i / 6003i</strong> — ошибки <code>C7301</code>. Есть решение без замены блоков проявки и хоппера.</li>
+          {/* Callout block */}
+          <section className="mb-10 rounded-2xl border border-pink-200 bg-gradient-to-br from-pink-50 to-purple-50 p-6">
+            <h2 className="text-2xl font-semibold mb-3">Устраняем проблемы Kyocera TASKalfa</h2>
+            <p className="text-gray-700 mb-4">
+              Наш опыт и собственные технологии помогают быстро устранять типовые и сложные неисправности без лишних замен узлов.
+            </p>
+            <ul className="list-disc list-inside space-y-2 text-gray-800">
+              <li>
+                <strong>TASKalfa 3252 / 2553 / 3554</strong> — треск, ошибка <code>C2840</code>.
+                <span className="block sm:inline"> Решаем проблему без замены ленты переноса.</span>
+              </li>
+              <li>
+                <strong>TASKalfa 4002i / 5002i / 6002 / 4003i / 5003i / 6003i</strong> — ошибка <code>C7301</code>.
+                <span className="block sm:inline"> Есть решение без замены блоков проявки и хоппера.</span>
+              </li>
             </ul>
           </section>
 
@@ -81,12 +88,8 @@ export default function KyoceraRepair() {
           <section className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl p-6 text-white">
             <h3 className="text-xl font-semibold mb-2">Нужна помощь сейчас?</h3>
             <div className="flex flex-col sm:flex-row gap-3">
-              <button onClick={goRepairForm} className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold">
-                Заказать ремонт
-              </button>
-              <a href="tel:+74951031468" className="bg-white/20 text-white px-6 py-3 rounded-lg font-semibold">
-                +7 495 103-14-68
-              </a>
+              <button onClick={goRepairForm} className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold">Заказать ремонт</button>
+              <a href="tel:+74951031468" className="bg-white/20 text-white px-6 py-3 rounded-lg font-semibold">+7 495 103-14-68</a>
             </div>
           </section>
         </div>
