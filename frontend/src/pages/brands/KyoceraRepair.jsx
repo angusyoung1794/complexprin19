@@ -38,7 +38,7 @@ export default function KyoceraRepair() {
           name="description"
           content="Ремонт и обслуживание принтеров Kyocera в Москве и МО: замена узлов, профилактика, устранение ошибок, оригинальные детали. Выезд мастера, гарантия 6 месяцев."
         />
-        <link rel="canonical" href="https://complexprint.ru/remонт-printerov-kyocera" />
+        <link rel="canonical" href="https://complexprint.ru/remont-printerov-kyocera" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
