@@ -380,7 +380,8 @@ export const printersData = {
       purpose: 'Крупный офис',
       note: 'Профессиональное МФУ для высоких нагрузок',
       price: '480000 ₽',
-      usageCategory: 'enterprise'
+      usageCategory: 'enterprise',
+      image: '/images/bizhub_C758.jpg'
     }
   ]
 };
