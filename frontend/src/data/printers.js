@@ -140,7 +140,8 @@ export const printersData = {
       purpose: 'Крупный офис',
       note: 'Высокоскоростное МФУ премиум-класса',
       price: '280 000 — 350 000+ ₽',
-      usageCategory: 'enterprise'
+      usageCategory: 'enterprise',
+      image: '/images/Color_LaserJet_Enterprise_M681dn.webp'
     },
     // LaserJet Pro - Личное использование
     {
