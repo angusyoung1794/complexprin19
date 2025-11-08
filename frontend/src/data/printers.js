@@ -320,7 +320,8 @@ export const printersData = {
       purpose: 'Крупный офис',
       note: 'Производительное МФУ',
       price: '325000 ₽',
-      usageCategory: 'enterprise'
+      usageCategory: 'enterprise',
+      image: '/images/TASKalfa5554ci.jpg'
     },
     {
       id: 'kyocera-5',
