@@ -291,7 +291,8 @@ export const printersData = {
       purpose: 'Малый офис',
       note: 'Компактный, с дуплексом',
       price: '38000 ₽',
-      usageCategory: 'personal'
+      usageCategory: 'personal',
+      image: '/images/KYOCERAEcosysP2035D.jpeg'
     },
     {
       id: 'kyocera-3',
