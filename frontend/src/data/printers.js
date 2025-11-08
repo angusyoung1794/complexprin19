@@ -83,7 +83,8 @@ export const printersData = {
       purpose: 'Малый офис',
       note: 'МФУ "4-в-1" с автоподачей',
       price: '45 000 — 60 000 ₽',
-      usageCategory: 'office'
+      usageCategory: 'office',
+      image: '/images/HP-Color-LaserJet-Pro-MFP-M283fdw.jpg'
     },
     {
       id: 'hp-3',
