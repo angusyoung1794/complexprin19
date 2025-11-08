@@ -202,7 +202,8 @@ export const printersData = {
       purpose: 'Малый офис',
       note: 'Компактный цветной принтер',
       price: '32000 ₽',
-      usageCategory: 'office'
+      usageCategory: 'office',
+      image: '/images/imageCLASSLBP622Cdw.jpg'
     },
     {
       id: 'canon-2',
