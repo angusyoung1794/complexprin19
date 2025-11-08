@@ -277,7 +277,8 @@ export const printersData = {
       purpose: 'Малый офис',
       note: 'Цветной, с дуплексом и сетью',
       price: '78000 ₽',
-      usageCategory: 'office'
+      usageCategory: 'office',
+      image: '/images/ECOSYS_P5026cdn.jpg'
     },
     {
       id: 'kyocera-2',
