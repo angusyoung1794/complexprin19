@@ -305,7 +305,8 @@ export const printersData = {
       purpose: 'Средний офис',
       note: 'Высокая скорость цветной печати',
       price: '135000 ₽',
-      usageCategory: 'office'
+      usageCategory: 'office',
+      image: '/images/ECOSYS_P6040cdn.jpg'
     },
     // TASKalfa - Высоконагруженный офис
     {
