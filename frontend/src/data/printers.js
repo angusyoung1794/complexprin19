@@ -259,7 +259,8 @@ export const printersData = {
       purpose: 'Крупный офис',
       note: 'Мощное МФУ для больших объемов',
       price: '265000 ₽',
-      usageCategory: 'enterprise'
+      usageCategory: 'enterprise',
+      image: '/images/imageRUNNERC5540.jpg'
     }
   ],
   
