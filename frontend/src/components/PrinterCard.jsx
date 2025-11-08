@@ -39,36 +39,58 @@ ${printer.colorSpeed ? `- Скорость цветной печати: ${printe
   };
 
   return (
-    <Card className="group overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full">
-      {/* Изображение принтера */}
-      <div className="relative h-48 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden flex-shrink-0">
-        {!imageError ? (
-          <img 
-            src={printerImage}
-            alt={printer.model}
-            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-            onError={(e) => {
-              console.error(`Failed to load image for ${printer.model}:`, printerImage, e);
-              setImageError(true);
-            }}
-            onLoad={() => {
-              console.log(`Successfully loaded image for ${printer.model}`);
-            }}
-          />
-        ) : (
-          <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
-            <div className="text-center">
-              <span className="text-6xl mb-2 block">🖨️</span>
-              <span className="text-xs text-gray-500">{printer.brand}</span>
+    <>
+      <Card className="group overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 flex flex-col h-full">
+        {/* Изображение принтера */}
+        <div 
+          className="relative h-48 bg-gradient-to-br from-gray-50 to-gray-100 overflow-hidden flex-shrink-0 cursor-pointer"
+          onClick={() => !imageError && setIsImageModalOpen(true)}
+          title="Нажмите для просмотра в полном размере"
+        >
+          {!imageError ? (
+            <img 
+              src={printerImage}
+              alt={printer.model}
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              onError={(e) => {
+                console.error(`Failed to load image for ${printer.model}:`, printerImage, e);
+                setImageError(true);
+              }}
+              onLoad={() => {
+                console.log(`Successfully loaded image for ${printer.model}`);
+              }}
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
+              <div className="text-center">
+                <span className="text-6xl mb-2 block">🖨️</span>
+                <span className="text-xs text-gray-500">{printer.brand}</span>
+              </div>
             </div>
+          )}
+          <div className="absolute top-3 right-3">
+            <Badge className="bg-white/90 backdrop-blur-sm text-purple-700 shadow-lg">
+              {printer.brand}
+            </Badge>
           </div>
-        )}
-        <div className="absolute top-3 right-3">
-          <Badge className="bg-white/90 backdrop-blur-sm text-purple-700 shadow-lg">
-            {printer.brand}
-          </Badge>
+          
+          {/* Иконка увеличения при наведении */}
+          {!imageError && (
+            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+              <div className="bg-white/90 rounded-full p-3 transform scale-75 group-hover:scale-100 transition-transform duration-300">
+                <svg 
+                  xmlns="http://www.w3.org/2000/svg" 
+                  className="h-6 w-6 text-purple-600" 
+                  fill="none" 
+                  viewBox="0 0 24 24" 
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+                </svg>
+              </div>
+            </div>
+          )}
         </div>
-      </div>
 
       <CardContent className="p-6 flex flex-col flex-1">
         {/* Заголовок */}
