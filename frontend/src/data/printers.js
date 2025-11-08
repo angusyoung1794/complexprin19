@@ -245,7 +245,8 @@ export const printersData = {
       purpose: 'Средний офис',
       note: 'Цветное МФУ для рабочих групп',
       price: '125000 ₽',
-      usageCategory: 'enterprise'
+      usageCategory: 'enterprise',
+      image: '/images/CANON-IMAGERUNNER-ADVANCE-C3025I.jpg'
     },
     {
       id: 'canon-5',
