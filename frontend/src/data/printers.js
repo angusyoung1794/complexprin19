@@ -334,7 +334,8 @@ export const printersData = {
       purpose: 'Крупный офис',
       note: 'Высокая месячная нагрузка',
       price: '415000 ₽',
-      usageCategory: 'enterprise'
+      usageCategory: 'enterprise',
+      image: '/images/TASKalfa 8054ci.jpg'
     }
   ],
   
