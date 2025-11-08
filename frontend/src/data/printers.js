@@ -184,7 +184,8 @@ export const printersData = {
       purpose: 'Крупный офис',
       note: 'Высокая производительность',
       price: '105000 ₽',
-      usageCategory: 'enterprise'
+      usageCategory: 'enterprise',
+      image: '/images/LaserJetM608.jpg'
     }
   ],
   
