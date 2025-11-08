@@ -352,7 +352,8 @@ export const printersData = {
       purpose: 'Малый офис',
       note: 'Компактное цветное МФУ',
       price: '85000 ₽',
-      usageCategory: 'office'
+      usageCategory: 'office',
+      image: '/images/bizhubC227.jpg'
     },
     {
       id: 'konica-2',
