@@ -230,7 +230,8 @@ export const printersData = {
       purpose: 'Малый офис',
       note: 'Компактный, с дуплексом и Wi-Fi',
       price: '28000 ₽',
-      usageCategory: 'personal'
+      usageCategory: 'personal',
+      image: '/images/imageCLASS LBP162dw.jpeg'
     },
     // imageRUNNER - Высоконагруженный офис
     {
