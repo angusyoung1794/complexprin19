@@ -147,6 +147,78 @@ ${printer.colorSpeed ? `- Скорость цветной печати: ${printe
         </div>
       </CardContent>
     </Card>
+
+    {/* Модальное окно для просмотра полноразмерного изображения */}
+    <Dialog open={isImageModalOpen} onOpenChange={setIsImageModalOpen}>
+      <DialogContent className="max-w-5xl w-full p-0 overflow-hidden bg-black/95">
+        <DialogTitle className="sr-only">
+          Полноразмерное изображение: {printer.model}
+        </DialogTitle>
+        <div className="relative">
+          {/* Кнопка закрытия */}
+          <button
+            onClick={() => setIsImageModalOpen(false)}
+            className="absolute top-4 right-4 z-10 bg-white/90 hover:bg-white rounded-full p-2 shadow-lg transition-all duration-300 hover:scale-110"
+            aria-label="Закрыть"
+          >
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              className="h-6 w-6 text-gray-800" 
+              fill="none" 
+              viewBox="0 0 24 24" 
+              stroke="currentColor"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          {/* Информация о принтере */}
+          <div className="absolute top-4 left-4 z-10 bg-white/90 backdrop-blur-sm rounded-lg p-3 shadow-lg">
+            <div className="flex items-center gap-2">
+              <Badge className="bg-purple-600 text-white">
+                {printer.brand}
+              </Badge>
+              <span className="text-sm font-semibold text-gray-800">{printer.model}</span>
+            </div>
+          </div>
+
+          {/* Полноразмерное изображение */}
+          <div className="flex items-center justify-center min-h-[400px] max-h-[85vh] p-8">
+            <img 
+              src={printerImage}
+              alt={printer.model}
+              className="max-w-full max-h-full object-contain rounded-lg"
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
+
+          {/* Дополнительная информация внизу */}
+          <div className="bg-white/95 backdrop-blur-sm p-4 border-t border-gray-200">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+              <div>
+                <span className="font-semibold text-gray-700">Категория:</span>
+                <p className="text-gray-600">{printer.category}</p>
+              </div>
+              {printer.colorSpeed && (
+                <div>
+                  <span className="font-semibold text-gray-700">Цветная печать:</span>
+                  <p className="text-gray-600">{printer.colorSpeed} стр/мин</p>
+                </div>
+              )}
+              <div>
+                <span className="font-semibold text-gray-700">Ч/б печать:</span>
+                <p className="text-gray-600">{printer.bwSpeed} стр/мин</p>
+              </div>
+              <div>
+                <span className="font-semibold text-gray-700">Разрешение:</span>
+                <p className="text-gray-600">{printer.resolution}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </DialogContent>
+    </Dialog>
+    </>
   );
 };
 
