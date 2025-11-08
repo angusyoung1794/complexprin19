@@ -69,7 +69,8 @@ export const printersData = {
       purpose: 'Домашний офис',
       note: 'Компактный, с дуплексом и Wi-Fi',
       price: '25 000 — 35 000 ₽',
-      usageCategory: 'personal'
+      usageCategory: 'personal',
+      image: '/images/ColorLaserJetProM255dw.jpeg'
     },
     {
       id: 'hp-2',
