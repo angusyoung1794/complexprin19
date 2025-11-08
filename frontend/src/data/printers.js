@@ -169,7 +169,8 @@ export const printersData = {
       purpose: 'Индивидуальная работа',
       note: 'Только печать',
       price: '17500 ₽',
-      usageCategory: 'personal'
+      usageCategory: 'personal',
+      image: '/images/LaserJetProM104aM104w.jpeg'
     },
     // LaserJet Enterprise - Высоконагруженный офис
     {
