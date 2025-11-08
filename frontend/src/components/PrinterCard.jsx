@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { Card, CardContent } from './ui/card';
 import { Badge } from './ui/badge';
+import { Dialog, DialogContent, DialogTitle } from './ui/dialog';
 import { getPrinterImage } from '../data/printers';
 
 const PrinterCard = ({ printer }) => {
   const [imageError, setImageError] = useState(false);
+  const [isImageModalOpen, setIsImageModalOpen] = useState(false);
   const printerImage = getPrinterImage(printer);
   
   // Логирование для отладки
