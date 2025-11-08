@@ -111,7 +111,8 @@ export const printersData = {
       purpose: 'Малый/Средний офис',
       note: 'Флагманское МФУ для малого бизнеса',
       price: '75 000 — 100 000 ₽',
-      usageCategory: 'office'
+      usageCategory: 'office',
+      image: '/images/ColorLaserJetProM479fdw.jpg'
     },
     // Color LaserJet Enterprise - Высоконагруженный офис
     {
