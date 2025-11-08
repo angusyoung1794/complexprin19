@@ -155,7 +155,8 @@ export const printersData = {
       purpose: 'Домашнее использование',
       note: 'Один из самых компактных',
       price: '14000 ₽',
-      usageCategory: 'personal'
+      usageCategory: 'personal',
+      image: '/images/LaserJet _Pro_M15w.jpg'
     },
     {
       id: 'hp-8',
