@@ -126,7 +126,8 @@ export const printersData = {
       purpose: 'Средний офис',
       note: 'Надежность и высокая нагрузка',
       price: '130 000 — 170 000 ₽',
-      usageCategory: 'enterprise'
+      usageCategory: 'enterprise',
+      image: '/images/Color_LaserJet_Enterprise_M855dn.jpg'
     },
     {
       id: 'hp-6',
