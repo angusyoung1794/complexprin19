@@ -366,7 +366,8 @@ export const printersData = {
       purpose: 'Малый офис',
       note: 'Компактное МФУ',
       price: '45000 ₽',
-      usageCategory: 'personal'
+      usageCategory: 'personal',
+      image: '/images/bizhub_227.jpeg'
     },
     {
       id: 'konica-3',
