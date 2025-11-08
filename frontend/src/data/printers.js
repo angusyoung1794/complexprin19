@@ -97,7 +97,8 @@ export const printersData = {
       purpose: 'Рабочая группа',
       note: 'Акцент на печать, сетевой интерфейс',
       price: '55 000 — 75 000 ₽',
-      usageCategory: 'office'
+      usageCategory: 'office',
+      image: '/images/ColorLaserJetProM454dn.jpg'
     },
     {
       id: 'hp-4',
