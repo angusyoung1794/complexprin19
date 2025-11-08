@@ -216,7 +216,8 @@ export const printersData = {
       purpose: 'Малый офис',
       note: 'Цветное МФУ 4-в-1',
       price: '58000 ₽',
-      usageCategory: 'office'
+      usageCategory: 'office',
+      image: '/images/imageCLASSMF743Cdw.jpg'
     },
     {
       id: 'canon-3',
