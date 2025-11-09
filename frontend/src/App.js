@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 import UserAgreement from "./pages/UserAgreement";
 import PrinterSelection from "./pages/PrinterSelection";
 import PrinterErrorGuide from "./pages/PrinterErrorGuide";
+import PrintDefectsGuide from "./pages/PrintDefectsGuide";
 import TermsOfService from "./pages/TermsOfService";
 import { Toaster } from "./components/ui/toaster";
 import { Helmet } from "react-helmet-async";
