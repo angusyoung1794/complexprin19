@@ -264,10 +264,22 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Добавить страницу гида по ошибкам принтеров"
+    - "Добавить страницу справочника дефектов печати"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
+
+  - task: "Создать страницу справочника дефектов печати"
+    implemented: true
+    working: false
+    file: "pages/PrintDefectsGuide.jsx, data/printDefects.js, components/Header.jsx, components/Footer.jsx, components/AboutSection.jsx, App.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: false
+          agent: "main"
+          comment: "Создана полная страница справочника дефектов печати с визуальным каталогом 21 дефекта. Реализовано: 1) Файл данных printDefects.js с описанием всех дефектов (симптомы, причины, решения), 2) Страница PrintDefectsGuide с фильтрами по типу проблемы и внешним проявлениям, 3) Карточки дефектов с фото из /images/, 4) Добавлены пункты в Header и Footer навигацию, 5) Добавлена секция на главную страницу в AboutSection, 6) SEO оптимизация с ключевыми фразами: 'почему принтер печатает полосами', 'что делать если осыпается тонер', 'ремонт термоузла HP', 'вертикальные полосы на печати Brother'. Все 21 изображение дефектов уже находятся в public/images/. Маршрут: /print-defects-guide. Готово к тестированию."
 
   - task: "Исправить навигацию на странице printer-selection"
     implemented: true
