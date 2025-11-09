@@ -283,6 +283,9 @@ test_plan:
         - working: true
           agent: "user"
           comment: "Пользователь подтвердил, что всё отлично получилось. Страница справочника дефектов работает корректно, визуальный каталог с фильтрами функционирует как ожидается."
+        - working: true
+          agent: "main"
+          comment: "Обновлен sitemap.xml - добавлен URL https://complexprint.ru/print-defects-guide с приоритетом 0.8. Robots.txt уже корректно настроен и указывает на sitemap."
 
   - task: "Исправить навигацию на странице printer-selection"
     implemented: true
