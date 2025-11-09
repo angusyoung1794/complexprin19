@@ -83,6 +83,7 @@ function App() {
           <Route path="/user-agreement" element={<UserAgreement />} />
           <Route path="/printer-selection" element={<PrinterSelection />} />
           <Route path="/printer-error-guide" element={<PrinterErrorGuide />} />
+          <Route path="/print-defects-guide" element={<PrintDefectsGuide />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/remont-printerov-hp" element={<HpRepair />} />
           <Route path="/remont-printerov-canon" element={<CanonRepair />} />
