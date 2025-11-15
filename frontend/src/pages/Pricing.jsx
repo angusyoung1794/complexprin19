@@ -10,7 +10,7 @@ export default function Pricing() {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
       <Helmet>
         <title>Цены на ремонт принтеров в Москве | ComplexPrint — диагностика, ремонт, абонентка</title>
-        <meta name="description" content="Прозрачные цены на ремонт принтеров и МФУ в Москве: диагностика от 3000₽ с выездом, ремонт от 3000₽, абонентское обслуживание от 1500₽/мес. Гарантия 6 месяцев." />
+        <meta name="description" content="Прозрачные цены на ремонт принтеров и МФУ в Москве: диагностика от 1500₽ с выездом, ремонт от 3000₽, абонентское обслуживание от 1500₽/мес. Гарантия 6 месяцев." />
         <link rel="canonical" href="https://complexprint.ru/ceny" />
       </Helmet>
 
@@ -23,7 +23,7 @@ export default function Pricing() {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100">
             <h2 className="text-2xl font-bold mb-2">Диагностика</h2>
-            <p className="text-3xl font-extrabold mb-4">от 3000₽</p>
+            <p className="text-3xl font-extrabold mb-4">от 1500₽</p>
             <ul className="text-gray-700 space-y-2 mb-6 list-disc list-inside">
               <li>Включая выезд по Москве</li>
               <li>Первичная оценка по телефону</li>
