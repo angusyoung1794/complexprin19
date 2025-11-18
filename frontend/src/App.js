@@ -94,6 +94,7 @@ function App() {
           <Route path="/remont-printerov-xerox" element={<XeroxRepair />} />
           <Route path="/ceny" element={<Pricing />} />
           <Route path="/rayony-moskvy" element={<Districts />} />
+          <Route path="/about-us" element={<AboutUs />} />
         </Routes>
       </BrowserRouter>
       <Toaster />
