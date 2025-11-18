@@ -2,8 +2,26 @@ import React from 'react';
 import { Badge } from './ui/badge';
 import { Card, CardContent } from './ui/card';
 import { printerImages, supportedBrands, equipmentTypes } from '../data/mock';
+import { useNavigate } from 'react-router-dom';
 
 const EquipmentSection = () => {
+  const navigate = useNavigate();
+
+  // Mapping for brand routes
+  const brandRoutes = {
+    'HP': '/remont-printerov-hp',
+    'Canon': '/remont-printerov-canon',
+    'Kyocera': '/remont-printerov-kyocera',
+    'Ricoh': '/remont-printerov-ricoh'
+  };
+
+  const handleCardClick = (brand) => {
+    const route = brandRoutes[brand];
+    if (route) {
+      navigate(route);
+    }
+  };
+
   return (
     <section id="equipment" className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -37,7 +55,11 @@ const EquipmentSection = () => {
         {/* Equipment Images Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
           {printerImages.map((equipment) => (
-            <Card key={equipment.id} className="group overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <Card 
+              key={equipment.id} 
+              className="group overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer"
+              onClick={() => handleCardClick(equipment.brand)}
+            >
               <CardContent className="p-0">
                 <div className="relative overflow-hidden">
                   <img 
