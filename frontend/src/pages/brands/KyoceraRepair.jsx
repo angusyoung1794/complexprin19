@@ -1,6 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 export default function KyoceraRepair() {
   const navigate = useNavigate();
@@ -25,75 +27,85 @@ export default function KyoceraRepair() {
     brand: "Kyocera",
     url: "https://complexprint.ru/remont-printerov-kyocera",
     description:
-      "Ремонт и обслуживание принтеров Kyocera в Москве и МО: замена узлов, профилактика, устранение ошибок, оригинальные детали. Выезд мастера, гарантия 6 месяцев.",
+      "Профессиональный ремонт и обслуживание принтеров Kyocera в Москве и МО. Диагностика, ремонт узла закрепления, замена роликов и оригинальные запчасти, гарантия 6 месяцев.",
   };
 
   return (
     <>
       <Helmet>
         <title>
-          Ремонт принтеров Kyocera в Москве | ComplexPrint — экономично и надёжно, гарантия 6 месяцев
+          Ремонт принтеров Kyocera в Москве | ComplexPrint — выезд, оригинальные запчасти, гарантия 6 месяцев
         </title>
         <meta
           name="description"
-          content="Ремонт и обслуживание принтеров Kyocera в Москве и МО: замена узлов, профилактика, устранение ошибок, оригинальные детали. Выезд мастера, гарантия 6 месяцев."
+          content="Профессиональный ремонт и обслуживание принтеров Kyocera в Москве и МО. Быстрая диагностика, выезд мастера, оригинальные детали, гарантия 6 месяцев."
         />
         <link rel="canonical" href="https://complexprint.ru/remont-printerov-kyocera" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <script type="application/ld+json">
+          {JSON.stringify(jsonLd)}
+        </script>
       </Helmet>
 
-      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-white py-16">
+      <Header />
+
+      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-white pt-24 pb-16">
         <div className="container mx-auto px-4 max-w-5xl">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Профессиональный ремонт принтеров Kyocera в Москве</h1>
+          
+          {/* Hero Image */}
+          <div className="mb-8 rounded-2xl overflow-hidden shadow-xl">
+            <img 
+              src="/images/Kyocera_master.jpg"
+              alt="Мастер ComplexPrint ремонтирует принтер Kyocera"
+              className="w-full h-[400px] object-cover"
+            />
+          </div>
+
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Профессиональный ремонт принтеров и МФУ Kyocera в Москве
+          </h1>
           <p className="text-lg text-gray-700 mb-6">
-            ECOSYS, TASKalfa — ремонт, профилактика, настройка. Гарантия 6 месяцев.
+            Линейки ECOSYS, TASKalfa — диагностика, ремонт, настройка. Долговечная керамика Kyocera. Гарантия 6 месяцев.
           </p>
 
-          {/* Callout block */}
-          <section className="mb-10 rounded-2xl border border-pink-200 bg-gradient-to-br from-pink-50 to-purple-50 p-6">
-            <h2 className="text-2xl font-semibold mb-3">Устраняем проблемы Kyocera TASKalfa</h2>
-            <p className="text-gray-700 mb-4">
-              Наш опыт и собственные технологии помогают быстро устранять типовые и сложные неисправности без лишних замен узлов.
-            </p>
+          {/* Callout */}
+          <section className="mb-10 rounded-2xl border border-cyan-200 bg-gradient-to-br from-cyan-50 to-blue-50 p-6">
+            <h2 className="text-2xl font-semibold mb-3">Частые проблемы Kyocera — быстрое решение</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-800">
-              <li>
-                <strong>TASKalfa 3252 / 2553 / 3554</strong> — треск, ошибка <code>C2840</code>.
-                <span className="block sm:inline"> Решаем проблему без замены ленты переноса.</span>
-              </li>
-              <li>
-                <strong>TASKalfa 4002i / 5002i / 6002 / 4003i / 5003i / 6003i</strong> — ошибка <code>C7301</code>.
-                <span className="block sm:inline"> Есть решение без замены блоков проявки и хоппера.</span>
-              </li>
+              <li><strong>Ошибки C / J</strong> — диагностика термоузла, датчиков температуры, прогрева.</li>
+              <li><strong>Замятия</strong> — обслуживание роликов, муфт, датчиков подачи/регистрации.</li>
+              <li><strong>Полосы / дефекты печати</strong> — замена девелопера, магнитного вала, чистящего лезвия.</li>
+              <li><strong>Низкая плотность / блеклая печать</strong> — регулировка лазера, замена девелопера.</li>
+              <li><strong>Сетевые/скан функции</strong> — настройка Address Book, LDAP, SMB, FTP протоколов.</li>
             </ul>
           </section>
 
           <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">Типовые неисправности Kyocera</h2>
+            <h2 className="text-2xl font-semibold mb-4">Что мы делаем</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-700">
-              <li>Подача/замятия: ролики подачи/вывода, направляющие</li>
-              <li>Артефакты печати: девелопер, фотобарабан, печка</li>
-              <li>Коды ошибок: узел закрепления, датчики</li>
+              <li>Диагностика в день обращения</li>
+              <li>Ремонт/замена термоузла (fuser unit), нагревательного элемента, термопленки</li>
+              <li>Замена роликов подачи, отделения, переноса</li>
+              <li>Обслуживание блока проявки (developer unit), замена магнитного вала</li>
+              <li>Чистка барабана, замена чистящего лезвия</li>
+              <li>Настройка сетевых функций Kyocera МФУ</li>
             </ul>
           </section>
 
-          <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">Наши услуги</h2>
-            <ul className="list-disc list-inside space-y-2 text-gray-700">
-              <li>Комплексная диагностика</li>
-              <li>Замена расходных узлов/ремонт механики</li>
-              <li>Профилактика, прошивки при необходимости</li>
-            </ul>
-          </section>
-
-          <section className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl p-6 text-white">
+          <section className="bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl p-6 text-white">
             <h3 className="text-xl font-semibold mb-2">Нужна помощь сейчас?</h3>
             <div className="flex flex-col sm:flex-row gap-3">
-              <button onClick={goRepairForm} className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold">Заказать ремонт</button>
-              <a href="tel:+74951031468" className="bg-white/20 text-white px-6 py-3 rounded-lg font-semibold">+7 495 103-14-68</a>
+              <button onClick={goRepairForm} className="bg-white text-cyan-600 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-50 transition-colors duration-200">
+                Заказать ремонт
+              </button>
+              <a href="tel:+74951031468" className="bg-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/30 transition-colors duration-200 text-center">
+                +7 495 103-14-68
+              </a>
             </div>
           </section>
         </div>
       </main>
+
+      <Footer />
     </>
   );
 }

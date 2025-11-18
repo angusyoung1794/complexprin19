@@ -1,6 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 export default function RicohRepair() {
   const navigate = useNavigate();
@@ -44,8 +46,20 @@ export default function RicohRepair() {
         </script>
       </Helmet>
 
-      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-white py-16">
+      <Header />
+
+      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-white pt-24 pb-16">
         <div className="container mx-auto px-4 max-w-5xl">
+          
+          {/* Hero Image */}
+          <div className="mb-8 rounded-2xl overflow-hidden shadow-xl">
+            <img 
+              src="/images/Ricoh_master.jpg"
+              alt="Мастер ComplexPrint ремонтирует принтер Ricoh"
+              className="w-full h-[400px] object-cover"
+            />
+          </div>
+
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             Профессиональный ремонт принтеров и МФУ Ricoh в Москве
           </h1>
@@ -77,16 +91,18 @@ export default function RicohRepair() {
           <section className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl p-6 text-white">
             <h3 className="text-xl font-semibold mb-2">Нужна помощь сейчас?</h3>
             <div className="flex flex-col sm:flex-row gap-3">
-              <button onClick={goRepairForm} className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold">
+              <button onClick={goRepairForm} className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors duration-200">
                 Заказать ремонт
               </button>
-              <a href="tel:+74951031468" className="bg-white/20 text-white px-6 py-3 rounded-lg font-semibold">
+              <a href="tel:+74951031468" className="bg-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/30 transition-colors duration-200 text-center">
                 +7 495 103-14-68
               </a>
             </div>
           </section>
         </div>
       </main>
+
+      <Footer />
     </>
   );
 }

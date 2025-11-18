@@ -1,6 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 export default function HpRepair() {
   const navigate = useNavigate();
@@ -44,50 +46,66 @@ export default function HpRepair() {
         </script>
       </Helmet>
 
-      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-white py-16">
+      <Header />
+
+      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-white pt-24 pb-16">
         <div className="container mx-auto px-4 max-w-5xl">
+          
+          {/* Hero Image */}
+          <div className="mb-8 rounded-2xl overflow-hidden shadow-xl">
+            <img 
+              src="/images/hp_master.jpg"
+              alt="Мастер ComplexPrint ремонтирует принтер HP"
+              className="w-full h-[400px] object-cover"
+            />
+          </div>
+
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             Ремонт принтеров HP в Москве с выездом
           </h1>
           <p className="text-lg text-gray-700 mb-6">
-            Обслуживаем HP LaserJet, Enterprise, Pro и МФУ. Диагностика в день обращения, оригинальные запчасти, гарантия 6 месяцев.
+            Быстрая диагностика и ремонт всех моделей HP LaserJet, Color LaserJet, PageWide, OfficeJet Pro. Гарантия 6 месяцев на все работы.
           </p>
 
           {/* Callout */}
-          <section className="mb-10 rounded-2xl border border-pink-200 bg-gradient-to-br from-pink-50 to-purple-50 p-6">
-            <h2 className="text-2xl font-semibold mb-3">Частые проблемы HP — быстрое решение</h2>
+          <section className="mb-10 rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50 to-cyan-50 p-6">
+            <h2 className="text-2xl font-semibold mb-3">Частые проблемы принтеров HP — быстрое решение</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-800">
-              <li><strong>Ошибка 50.x (Fuser)</strong> — ремонт/замена узла закрепления, без лишних замен модулей.</li>
-              <li><strong>Ошибка 13.x (Paper Jam)</strong> — восстановление тракта, замена роликов/датчиков подачи.</li>
-              <li><strong>Ошибка 59.x (Привод)</strong> — диагностика/ремонт узла привода, корректировка шестерён.</li>
-              <li><strong>Серый фон, полосы</strong> — проверка картриджа, чистка/ремонт печки, настройка.</li>
+              <li><strong>Ошибка 50.x</strong> — ремонт/замена термоузла (fuser unit), проверка термистора.</li>
+              <li><strong>Замятия бумаги</strong> — замена роликов подачи/отделения, очистка тракта.</li>
+              <li><strong>Дефекты печати (полосы, пятна)</strong> — замена барабана, лезвия очистки, уплотнителей картриджа.</li>
+              <li><strong>Ошибки картриджа</strong> — перепрошивка чипа, замена контактов, диагностика совместимости.</li>
+              <li><strong>Не включается / не печатает</strong> — ремонт блока питания, форматтера, диагностика прошивки.</li>
             </ul>
           </section>
 
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-4">Что мы делаем</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-700">
-              <li>Быстрая диагностика и консультация</li>
-              <li>Ремонт/замена узла закрепления (fuser), термоплёнки/валов</li>
-              <li>Замена роликов, шестерён, датчиков, профилактика тракта</li>
-              <li>Настройка и обслуживание по договору</li>
+              <li>Бесплатная диагностика в день обращения</li>
+              <li>Ремонт/замена термоузла (fuser) — работаем только с оригинальными запчастями</li>
+              <li>Замена роликов подачи, отделения, переноса (pickup, separation, transfer rollers)</li>
+              <li>Чистка лазерного блока, зеркал, оптики</li>
+              <li>Ремонт блока питания (power supply), форматтера (formatter board)</li>
+              <li>Настройка сетевых функций, обновление прошивки</li>
             </ul>
           </section>
 
-          <section className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl p-6 text-white">
+          <section className="bg-gradient-to-r from-blue-500 to-cyan-600 rounded-2xl p-6 text-white">
             <h3 className="text-xl font-semibold mb-2">Нужна помощь сейчас?</h3>
-            <p className="mb-4">Оставьте заявку — приедем в день обращения.</p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <button onClick={goRepairForm} className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold">
+              <button onClick={goRepairForm} className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200">
                 Заказать ремонт
               </button>
-              <a href="tel:+74951031468" className="bg-white/20 text-white px-6 py-3 rounded-lg font-semibold">
+              <a href="tel:+74951031468" className="bg-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/30 transition-colors duration-200 text-center">
                 +7 495 103-14-68
               </a>
             </div>
           </section>
         </div>
       </main>
+
+      <Footer />
     </>
   );
 }

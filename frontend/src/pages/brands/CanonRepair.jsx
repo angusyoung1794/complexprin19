@@ -1,6 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 export default function CanonRepair() {
   const navigate = useNavigate();
@@ -25,18 +27,18 @@ export default function CanonRepair() {
     brand: "Canon",
     url: "https://complexprint.ru/remont-printerov-canon",
     description:
-      "Квалифицированный ремонт лазерных принтеров и МФУ Canon в Москве и МО. Диагностика, ремонт узла закрепления, замена роликов, оригинальные запчасти, гарантия 6 месяцев.",
+      "Профессиональный ремонт и обслуживание принтеров Canon в Москве и МО. Диагностика, ремонт узла закрепления, замена роликов и оригинальные запчасти, гарантия 6 месяцев.",
   };
 
   return (
     <>
       <Helmet>
         <title>
-          Ремонт принтеров Canon в Москве | ComplexPrint — диагностика в день обращения, гарантия 6 месяцев
+          Ремонт принтеров Canon в Москве | ComplexPrint — выезд, оригинальные запчасти, гарантия 6 месяцев
         </title>
         <meta
           name="description"
-          content="Квалифицированный ремонт лазерных принтеров и МФУ Canon в Москве и МО. Быстрая диагностика, оригинальные запчасти, гарантия 6 месяцев."
+          content="Профессиональный ремонт и обслуживание принтеров Canon в Москве и МО. Быстрая диагностика, выезд мастера, оригинальные детали, гарантия 6 месяцев."
         />
         <link rel="canonical" href="https://complexprint.ru/remont-printerov-canon" />
         <script type="application/ld+json">
@@ -44,46 +46,66 @@ export default function CanonRepair() {
         </script>
       </Helmet>
 
-      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-white py-16">
+      <Header />
+
+      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-white pt-24 pb-16">
         <div className="container mx-auto px-4 max-w-5xl">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Ремонт принтеров и МФУ Canon в Москве</h1>
+          
+          {/* Hero Image */}
+          <div className="mb-8 rounded-2xl overflow-hidden shadow-xl">
+            <img 
+              src="/images/Canon_master.jpg"
+              alt="Мастер ComplexPrint ремонтирует принтер Canon"
+              className="w-full h-[400px] object-cover"
+            />
+          </div>
+
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Профессиональный ремонт принтеров и МФУ Canon в Москве
+          </h1>
           <p className="text-lg text-gray-700 mb-6">
-            Специализация на i-SENSYS, imageRUNNER, imageCLASS. Оригинальные запчасти и гарантия 6 месяцев.
+            Линейки imageRUNNER, i-SENSYS, imageCLASS, PIXMA Pro — диагностика, ремонт, настройка. Гарантия 6 месяцев.
           </p>
 
           {/* Callout */}
-          <section className="mb-10 rounded-2xl border border-pink-200 bg-gradient-to-br from-pink-50 to-purple-50 p-6">
+          <section className="mb-10 rounded-2xl border border-red-200 bg-gradient-to-br from-red-50 to-orange-50 p-6">
             <h2 className="text-2xl font-semibold mb-3">Частые проблемы Canon — быстрое решение</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-800">
-              <li><strong>Ошибки термоузла (E000/E001/E002/E003)</strong> — диагностика, ремонт/замена печки.</li>
-              <li><strong>Несовместимый картридж (E050)</strong> — чистка/замена, проверка контактов чипа.</li>
-              <li><strong>Коды B2xx/регистрация бумаги</strong> — проверка датчиков, узла подачи и захвата.</li>
-              <li><strong>Полосы/серый фон</strong> — картридж, оптика, узел закрепления.</li>
+              <li><strong>Ошибки E000-E999</strong> — диагностика термоузла, датчиков, привода, форматтера.</li>
+              <li><strong>Замятия</strong> — обслуживание роликов подачи/регистрации, чистка датчиков.</li>
+              <li><strong>Дефекты печати</strong> — замена барабана, девелопера, лезвия очистки, герметизация.</li>
+              <li><strong>Медленная печать / долгий прогрев</strong> — ремонт термоузла, проверка питания.</li>
+              <li><strong>Сетевые функции МФУ</strong> — настройка сканирования, Address Book, протоколов SMB/FTP.</li>
             </ul>
           </section>
 
           <section className="mb-10">
             <h2 className="text-2xl font-semibold mb-4">Что мы делаем</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-700">
-              <li>Ремонт печки, замена роликов и узлов подачи</li>
-              <li>Настройка сетевых функций МФУ, скан в сеть/почту</li>
-              <li>Диагностика в день обращения, договор для юрлиц</li>
+              <li>Диагностика в день обращения</li>
+              <li>Ремонт/замена термоузла (fixing unit), термопленки, прижимного вала</li>
+              <li>Замена роликов подачи, отделения, регистрации</li>
+              <li>Чистка лазерного блока, зеркал, оптической системы</li>
+              <li>Ремонт блока питания, DC контроллера, форматтера</li>
+              <li>Настройка сетевых функций Canon МФУ (imageRUNNER ADVANCE)</li>
             </ul>
           </section>
 
-          <section className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl p-6 text-white">
+          <section className="bg-gradient-to-r from-red-500 to-orange-600 rounded-2xl p-6 text-white">
             <h3 className="text-xl font-semibold mb-2">Нужна помощь сейчас?</h3>
             <div className="flex flex-col sm:flex-row gap-3">
-              <button onClick={goRepairForm} className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold">
+              <button onClick={goRepairForm} className="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-red-50 transition-colors duration-200">
                 Заказать ремонт
               </button>
-              <a href="tel:+74951031468" className="bg-white/20 text-white px-6 py-3 rounded-lg font-semibold">
+              <a href="tel:+74951031468" className="bg-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/30 transition-colors duration-200 text-center">
                 +7 495 103-14-68
               </a>
             </div>
           </section>
         </div>
       </main>
+
+      <Footer />
     </>
   );
 }
