@@ -23,6 +23,7 @@ import KonicaMinoltaRepair from "./pages/brands/KonicaMinoltaRepair";
 import XeroxRepair from "./pages/brands/XeroxRepair";
 import Pricing from "./pages/Pricing";
 import Districts from "./pages/Districts";
+import AboutUs from "./pages/AboutUs";
 
 const Home = () => {
   const localBusinessJsonLd = {
