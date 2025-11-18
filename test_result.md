@@ -341,6 +341,54 @@ test_plan:
           agent: "main"
           comment: "Добавлены счетчики аналитики в <head> главной страницы: 1) Яндекс.Метрика (ID: 105245584) с настройками: webvisor, clickmap, ecommerce, accurateTrackBounce, trackLinks, 2) Google Analytics (ID: G-CQHCL9ZBS8), 3) Микроразметка Schema.org LocalBusiness с полной информацией о компании: название, адрес (Абрамцевская 11 к1 стр3, Москва 127549), телефон (+74951031468), часы работы (Пн-Вс 09:00-21:00), 4) AggregateRating с рейтингом 4.9 из 500 отзывов. Все счетчики размещены в начале <head> для раннего запуска. Frontend перезапущен, изменения активны."
 
+  - task: "Добавить изображения мастеров на страницы брендов"
+    implemented: true
+    working: false
+    file: "pages/brands/HpRepair.jsx, CanonRepair.jsx, KyoceraRepair.jsx, RicohRepair.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: false
+          agent: "main"
+          comment: "Добавлены изображения мастеров на все 4 страницы брендов: hp_master.jpg для HP, Canon_master.jpg для Canon, Kyocera_master.jpg для Kyocera, Ricoh_master.jpg для Ricoh. Изображения отображаются в hero секции каждой страницы."
+  
+  - task: "Добавить Header и Footer на страницы брендов"
+    implemented: true
+    working: false
+    file: "pages/brands/HpRepair.jsx, CanonRepair.jsx, KyoceraRepair.jsx, RicohRepair.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: false
+          agent: "main"
+          comment: "Добавлены компоненты Header и Footer на все 4 страницы ремонта брендов (HP, Canon, Kyocera, Ricoh). Теперь страницы имеют полноценную навигацию и footer."
+  
+  - task: "Создать страницу 'О нас'"
+    implemented: true
+    working: false
+    file: "pages/AboutUs.jsx, App.js, components/Header.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: false
+          agent: "main"
+          comment: "Создана новая страница /about-us с полным контентом из документа about_us.docx. Включает: заголовок, подзаголовок, описание компании, преимущества (4 блока), специальное предложение, философию компании и CTA секцию. Добавлено изображение HP_A3_master.jpg в hero секции. Страница полностью адаптивна с Header и Footer. Обновлена навигация в Header - теперь клик на 'О нас' ведет на /about-us вместо секции на главной странице."
+  
+  - task: "Добавить ссылки на страницы брендов с главной страницы"
+    implemented: true
+    working: false
+    file: "components/EquipmentSection.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: false
+          agent: "main"
+          comment: "Добавлена навигация на карточки принтеров в EquipmentSection. Теперь при клике на карточку: HP → /remont-printerov-hp, Canon → /remont-printerov-canon, Kyocera → /remont-printerov-kyocera, Ricoh → /remont-printerov-ricoh. Карточки стали кликабельными с cursor: pointer."
+
 agent_communication:
     - agent: "main"
       message: "Реализованы все требуемые изменения в форме заявки на ремонт: добавлены новые бренды Pantum и 'Другой бренд', создана модалка с пользовательским соглашением, добавлен обязательный checkbox согласия с валидацией. Установлен React Router для навигации. Backend тестирование завершено успешно. Пользователь будет тестировать frontend вручную."
