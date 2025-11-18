@@ -100,7 +100,7 @@ const HeroSection = () => {
           <div className="relative">
             <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl">
               <img 
-                src="https://customer-assets.emergentagent.com/job_repair-hub-47/artifacts/afv6tv0q_hp.jpg"
+                src="/images/hp.jpg"
                 alt="Профессиональное печатное оборудование"
                 className="w-full h-auto rounded-2xl shadow-lg"
               />
