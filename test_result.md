@@ -388,6 +388,18 @@ test_plan:
         - working: false
           agent: "main"
           comment: "Добавлена навигация на карточки принтеров в EquipmentSection. Теперь при клике на карточку: HP → /remont-printerov-hp, Canon → /remont-printerov-canon, Kyocera → /remont-printerov-kyocera, Ricoh → /remont-printerov-ricoh. Карточки стали кликабельными с cursor: pointer."
+  
+  - task: "Добавить Header, Footer и изображения на страницы Konica Minolta и Xerox"
+    implemented: true
+    working: false
+    file: "pages/brands/KonicaMinoltaRepair.jsx, XeroxRepair.jsx"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+        - working: false
+          agent: "main"
+          comment: "Добавлены Header и Footer на страницы remont-printerov-konica-minolta и remont-printerov-xerox. Добавлены изображения: bizhub_master.jpg для Konica Minolta и Xerox_master.jpg для Xerox. ВАЖНО: Изображения bizhub_master.jpg и Xerox_master.jpg отсутствуют в папке /images/. Код готов, но изображения нужно добавить вручную в папку /app/frontend/public/images/."
 
 agent_communication:
     - agent: "main"
