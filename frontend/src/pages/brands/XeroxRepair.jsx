@@ -1,6 +1,8 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
 export default function XeroxRepair() {
   const navigate = useNavigate();
@@ -42,18 +44,36 @@ export default function XeroxRepair() {
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
-      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-white py-16">
+      <Header />
+
+      <main className="min-h-screen bg-gradient-to-br from-gray-50 to-white pt-24 pb-16">
         <div className="container mx-auto px-4 max-w-5xl">
-          <h1 className="text-4xl font-bold text-gray-900 mb-6">Ремонт принтеров и МФУ Xerox в Москве</h1>
-          <p className="text-lg text-gray-700 mb-6">Линейки VersaLink, WorkCentre, Phaser — диагностика, ремонт, профилактика. Гарантия 6 месяцев.</p>
+          
+          {/* Hero Image */}
+          <div className="mb-8 rounded-2xl overflow-hidden shadow-xl">
+            <img 
+              src="/images/Xerox_master.jpg"
+              alt="Мастер ComplexPrint ремонтирует принтер Xerox"
+              className="w-full h-[400px] object-cover"
+            />
+          </div>
+
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Ремонт принтеров и МФУ Xerox в Москве
+          </h1>
+          <p className="text-lg text-gray-700 mb-6">
+            Линейки VersaLink, WorkCentre, Phaser — диагностика, ремонт, профилактика. Гарантия 6 месяцев.
+          </p>
 
           {/* Callout */}
-          <section className="mb-10 rounded-2xl border border-pink-200 bg-gradient-to-br from-pink-50 to-purple-50 p-6">
+          <section className="mb-10 rounded-2xl border border-blue-200 bg-gradient-to-br from-blue-50 to-indigo-50 p-6">
             <h2 className="text-2xl font-semibold mb-3">Частые проблемы Xerox — быстрое решение</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-800">
-              <li><strong>Замятия</strong> — восстановление тракта, замена роликов/датчиков.</li>
-              <li><strong>Дефекты печати</strong> — диагностика картриджей/девелопера/печки.</li>
-              <li><strong>Ошибки контроллера/сканера</strong> — проверка датчиков, калибровки и прошивок.</li>
+              <li><strong>Замятия бумаги</strong> — восстановление тракта подачи, замена роликов захвата/отделения, регулировка датчиков.</li>
+              <li><strong>Дефекты печати (полосы, пятна, блеклая печать)</strong> — диагностика картриджей/девелопера/печки, замена барабана.</li>
+              <li><strong>Ошибки контроллера/сканера</strong> — проверка датчиков, калибровка цветопередачи, обновление прошивок.</li>
+              <li><strong>Проблемы с термоузлом</strong> — ремонт/замена fuser unit, проверка термистора и нагревательного элемента.</li>
+              <li><strong>Сетевые функции МФУ</strong> — настройка сканирования по сети, Email/SMB протоколов, Address Book.</li>
             </ul>
           </section>
 
@@ -61,21 +81,31 @@ export default function XeroxRepair() {
             <h2 className="text-2xl font-semibold mb-4">Наши услуги</h2>
             <ul className="list-disc list-inside space-y-2 text-gray-700">
               <li>Диагностика в день обращения</li>
-              <li>Ремонт/замена узла закрепления, термоплёнки/валов</li>
-              <li>Замена роликов, шестерён, датчиков</li>
-              <li>Настройка сетевых функций МФУ</li>
+              <li>Ремонт/замена узла закрепления (fuser unit), термоплёнки, прижимного вала</li>
+              <li>Замена роликов подачи, отделения, переноса</li>
+              <li>Обслуживание картриджей и блока проявки (developer unit)</li>
+              <li>Чистка барабана, замена чистящего лезвия</li>
+              <li>Настройка сетевых функций МФУ Xerox</li>
+              <li>Калибровка цветопередачи и качества печати</li>
+              <li>Обновление прошивки и драйверов</li>
             </ul>
           </section>
 
-          <section className="bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl p-6 text-white">
+          <section className="bg-gradient-to-r from-blue-500 to-indigo-600 rounded-2xl p-6 text-white">
             <h3 className="text-xl font-semibold mb-2">Нужна помощь сейчас?</h3>
             <div className="flex flex-col sm:flex-row gap-3">
-              <button onClick={goRepairForm} className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold">Заказать ремонт</button>
-              <a href="tel:+74951031468" className="bg-white/20 text-white px-6 py-3 rounded-lg font-semibold">+7 495 103-14-68</a>
+              <button onClick={goRepairForm} className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200">
+                Заказать ремонт
+              </button>
+              <a href="tel:+74951031468" className="bg-white/20 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/30 transition-colors duration-200 text-center">
+                +7 495 103-14-68
+              </a>
             </div>
           </section>
         </div>
       </main>
+
+      <Footer />
     </>
   );
 }
