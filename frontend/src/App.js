@@ -24,6 +24,7 @@ import XeroxRepair from "./pages/brands/XeroxRepair";
 import Pricing from "./pages/Pricing";
 import Districts from "./pages/Districts";
 import AboutUs from "./pages/AboutUs";
+import ScrollToTop from "./components/ScrollToTop";
 
 const Home = () => {
   const localBusinessJsonLd = {
