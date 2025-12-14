@@ -75,6 +75,8 @@ const Header = () => {
             <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">Услуги</button>
             <button onClick={() => scrollToSection('equipment')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">Оборудование</button>
             <button onClick={() => navigate('/about-us')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">О нас</button>
+            <button onClick={() => navigate('/ceny')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">Цены</button>
+            <button onClick={() => navigate('/faq')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">FAQ</button>
             <button onClick={() => navigate('/print-defects-guide')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">Справочник дефектов</button>
             {/* Контакты ведет в Telegram */}
             <button onClick={openTelegram} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">Контакты</button>
