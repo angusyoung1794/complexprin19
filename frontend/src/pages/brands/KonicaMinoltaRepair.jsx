@@ -116,7 +116,7 @@ export default function KonicaMinoltaRepair() {
               </a>
             </div>
           </section>
-        </div>
+        </article>
       </main>
 
       <Footer />
