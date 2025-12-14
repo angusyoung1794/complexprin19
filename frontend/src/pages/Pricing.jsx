@@ -1,10 +1,16 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+import Breadcrumbs from "../components/Breadcrumbs";
+import { getPricingOffersSchema } from "../utils/schemas";
 
 export default function Pricing() {
   const navigate = useNavigate();
   const goRepairForm = () => navigate('/', { state: { scrollTo: 'repair-request' } });
+  
+  const pricingSchema = getPricingOffersSchema();
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
