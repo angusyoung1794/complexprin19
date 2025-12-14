@@ -112,7 +112,7 @@ export default function RicohRepair() {
               </a>
             </div>
           </section>
-        </div>
+        </article>
       </main>
 
       <Footer />
