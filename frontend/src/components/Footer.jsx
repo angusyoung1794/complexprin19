@@ -63,7 +63,9 @@ const Footer = () => {
               <button onClick={() => scrollToSection('home')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left">Главная</button>
               <button onClick={() => scrollToSection('services')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left">Услуги</button>
               <button onClick={() => scrollToSection('equipment')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left">Оборудование</button>
-              <button onClick={() => scrollToSection('about')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left">О нас</button>
+              <button onClick={() => go('/about-us')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left">О нас</button>
+              <button onClick={() => go('/ceny')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left">Цены</button>
+              <button onClick={() => go('/faq')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left">FAQ</button>
               <button onClick={() => go('/print-defects-guide')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left">Справочник дефектов</button>
               <button onClick={() => scrollToSection('repair-request')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left">Заявка на ремонт</button>
               <a href="https://t.me/complexprint_mos" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200">
