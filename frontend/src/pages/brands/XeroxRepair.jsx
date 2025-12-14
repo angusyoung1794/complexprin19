@@ -45,19 +45,30 @@ export default function XeroxRepair() {
           content="Ремонт принтеров и МФУ Xerox в Москве и МО: диагностика, ремонт, настройка, оригинальные детали. Выезд мастера, гарантия 6 месяцев."
         />
         <link rel="canonical" href="https://complexprint.ru/remont-printerov-xerox" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <meta property="og:title" content="Ремонт принтеров Xerox в Москве | ComplexPrint" />
+        <meta property="og:url" content="https://complexprint.ru/remont-printerov-xerox" />
+        <meta name="robots" content="index, follow" />
+        <link rel="alternate" hrefLang="ru" href="https://complexprint.ru/remont-printerov-xerox" />
+        <script type="application/ld+json">
+          {JSON.stringify(brandSchema)}
+        </script>
       </Helmet>
 
       <Header />
 
       <main className="min-h-screen bg-gradient-to-br from-gray-50 to-white pt-24 pb-16">
-        <div className="container mx-auto px-4 max-w-5xl">
+        <article className="container mx-auto px-4 max-w-5xl">
           
+          <Breadcrumbs items={[
+            { name: 'Услуги', url: '/#services' },
+            { name: 'Ремонт принтеров Xerox' }
+          ]} />
+
           {/* Hero Image */}
-          <div className="mb-8 rounded-2xl overflow-hidden shadow-xl">
+          <header className="mb-8 rounded-2xl overflow-hidden shadow-xl">
             <img 
               src="/images/Xerox_master.jpg"
-              alt="Мастер ComplexPrint ремонтирует принтер Xerox"
+              alt="Мастер ComplexPrint ремонтирует принтер Xerox WorkCentre с оригинальными запчастями"
               className="w-full h-[400px] object-cover"
             />
           </div>
