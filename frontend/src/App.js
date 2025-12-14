@@ -122,6 +122,7 @@ function App() {
           <Route path="/ceny" element={<Pricing />} />
           <Route path="/rayony-moskvy" element={<Districts />} />
           <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/faq" element={<FAQ />} />
         </Routes>
       </BrowserRouter>
       <Toaster />
