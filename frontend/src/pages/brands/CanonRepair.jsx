@@ -3,32 +3,14 @@ import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import Breadcrumbs from "../../components/Breadcrumbs";
+import { getBrandServiceSchema } from "../../utils/schemas";
 
 export default function CanonRepair() {
   const navigate = useNavigate();
   const goRepairForm = () => navigate('/', { state: { scrollTo: 'repair-request' } });
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    serviceType: "Ремонт принтеров Canon",
-    provider: {
-      "@type": "LocalBusiness",
-      name: "Комплекс Принт",
-      telephone: "+7-495-103-14-68",
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Москва",
-        addressCountry: "RU",
-        streetAddress: "Абрамцевская 11 к1 стр3",
-      },
-    },
-    areaServed: ["Москва", "Московская область"],
-    brand: "Canon",
-    url: "https://complexprint.ru/remont-printerov-canon",
-    description:
-      "Профессиональный ремонт и обслуживание принтеров Canon в Москве и МО. Диагностика, ремонт узла закрепления, замена роликов и оригинальные запчасти, гарантия 6 месяцев.",
-  };
+  const brandSchema = getBrandServiceSchema('canon');
 
   return (
     <>
@@ -41,24 +23,33 @@ export default function CanonRepair() {
           content="Профессиональный ремонт и обслуживание принтеров Canon в Москве и МО. Быстрая диагностика, выезд мастера, оригинальные детали, гарантия 6 месяцев."
         />
         <link rel="canonical" href="https://complexprint.ru/remont-printerov-canon" />
+        <meta property="og:title" content="Ремонт принтеров Canon в Москве | ComplexPrint" />
+        <meta property="og:url" content="https://complexprint.ru/remont-printerov-canon" />
+        <meta name="robots" content="index, follow" />
+        <link rel="alternate" hrefLang="ru" href="https://complexprint.ru/remont-printerov-canon" />
         <script type="application/ld+json">
-          {JSON.stringify(jsonLd)}
+          {JSON.stringify(brandSchema)}
         </script>
       </Helmet>
 
       <Header />
 
       <main className="min-h-screen bg-gradient-to-br from-gray-50 to-white pt-24 pb-16">
-        <div className="container mx-auto px-4 max-w-5xl">
+        <article className="container mx-auto px-4 max-w-5xl">
           
+          <Breadcrumbs items={[
+            { name: 'Услуги', url: '/#services' },
+            { name: 'Ремонт принтеров Canon' }
+          ]} />
+
           {/* Hero Image */}
-          <div className="mb-8 rounded-2xl overflow-hidden shadow-xl">
+          <header className="mb-8 rounded-2xl overflow-hidden shadow-xl">
             <img 
               src="/images/Canon_master.jpg"
-              alt="Мастер ComplexPrint ремонтирует принтер Canon"
+              alt="Мастер ComplexPrint ремонтирует принтер Canon i-SENSYS с оригинальными запчастями"
               className="w-full h-[400px] object-cover"
             />
-          </div>
+          </header>
 
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             Профессиональный ремонт принтеров и МФУ Canon в Москве
@@ -102,7 +93,7 @@ export default function CanonRepair() {
               </a>
             </div>
           </section>
-        </div>
+        </article>
       </main>
 
       <Footer />
