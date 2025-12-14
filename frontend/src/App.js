@@ -25,8 +25,24 @@ import Pricing from "./pages/Pricing";
 import Districts from "./pages/Districts";
 import AboutUs from "./pages/AboutUs";
 import ScrollToTop from "./components/ScrollToTop";
+import FAQ from "./pages/FAQ";
+import { 
+  getOrganizationSchema, 
+  getWebSiteSchema,
+  getSubscriptionServiceSchema,
+  getRepairServiceSchema,
+  getDiagnosticServiceSchema
+} from "./utils/schemas";
 
 const Home = () => {
+  // Комплексная Schema.org разметка
+  const organizationSchema = getOrganizationSchema();
+  const websiteSchema = getWebSiteSchema();
+  const subscriptionServiceSchema = getSubscriptionServiceSchema();
+  const repairServiceSchema = getRepairServiceSchema();
+  const diagnosticServiceSchema = getDiagnosticServiceSchema();
+
+  // Старая разметка для обратной совместимости (можно удалить, если используется новая)
   const localBusinessJsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
