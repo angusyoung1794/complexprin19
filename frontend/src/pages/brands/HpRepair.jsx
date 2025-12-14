@@ -93,7 +93,7 @@ export default function HpRepair() {
               </a>
             </div>
           </section>
-        </div>
+        </article>
       </main>
 
       <Footer />
