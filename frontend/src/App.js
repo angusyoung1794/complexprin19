@@ -77,7 +77,16 @@ const Home = () => {
         <title>Ремонт принтеров в Москве с выездом | ComplexPrint — HP, Canon, Kyocera, Ricoh. Гарантия 6 месяцев</title>
         <meta name="description" content="Профессиональный ремонт и обслуживание лазерных принтеров и МФУ в Москве и МО. Выезд мастера в день обращения, оригинальные запчасти, договор и гарантия 6 месяцев. HP, Canon, Kyocera, Ricoh. Приём заявок 24/7." />
         <link rel="canonical" href="https://complexprint.ru/" />
-        <script type="application/ld+json">{JSON.stringify(localBusinessJsonLd)}</script>
+        <meta name="robots" content="index, follow" />
+        <meta httpEquiv="content-language" content="ru" />
+        <link rel="alternate" hrefLang="ru" href="https://complexprint.ru/" />
+        
+        {/* Расширенные Schema.org разметки */}
+        <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(websiteSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(subscriptionServiceSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(repairServiceSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(diagnosticServiceSchema)}</script>
       </Helmet>
       <Header />
       <main>
