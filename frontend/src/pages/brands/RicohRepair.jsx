@@ -71,7 +71,7 @@ export default function RicohRepair() {
               alt="Мастер ComplexPrint ремонтирует принтер Ricoh Aficio с оригинальными запчастями"
               className="w-full h-[400px] object-cover"
             />
-          </div>
+          </header>
 
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             Профессиональный ремонт принтеров и МФУ Ricoh в Москве
