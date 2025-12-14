@@ -18,9 +18,19 @@ export default function Pricing() {
         <title>Цены на ремонт принтеров в Москве | ComplexPrint — диагностика, ремонт, абонентка</title>
         <meta name="description" content="Прозрачные цены на ремонт принтеров и МФУ в Москве: диагностика от 1500₽ с выездом, ремонт от 3000₽, абонентское обслуживание от 1500₽/мес. Гарантия 6 месяцев." />
         <link rel="canonical" href="https://complexprint.ru/ceny" />
+        <meta property="og:title" content="Цены на ремонт принтеров | ComplexPrint" />
+        <meta property="og:url" content="https://complexprint.ru/ceny" />
+        <meta name="robots" content="index, follow" />
+        <link rel="alternate" hrefLang="ru" href="https://complexprint.ru/ceny" />
+        
+        {/* Schema.org для прайс-листа */}
+        <script type="application/ld+json">{JSON.stringify(pricingSchema)}</script>
       </Helmet>
 
-      <div className="container mx-auto px-4 pt-24 pb-16 max-w-6xl">
+      <Header />
+
+      <main className="container mx-auto px-4 pt-24 pb-16 max-w-6xl">
+        <Breadcrumbs items={[{ name: 'Цены' }]} />
         <header className="text-center mb-12">
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">Цены на ремонт принтеров</h1>
           <p className="text-gray-600 text-lg">Прозрачные тарифы: диагностика, разовый ремонт и абонентское обслуживание</p>
