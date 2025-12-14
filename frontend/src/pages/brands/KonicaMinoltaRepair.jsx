@@ -45,19 +45,30 @@ export default function KonicaMinoltaRepair() {
           content="Ремонт и обслуживание принтеров и МФУ Konica Minolta в Москве и МО. Быстрая диагностика, выезд мастера, оригинальные детали, гарантия 6 месяцев."
         />
         <link rel="canonical" href="https://complexprint.ru/remont-printerov-konica-minolta" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+        <meta property="og:title" content="Ремонт принтеров Konica Minolta в Москве | ComplexPrint" />
+        <meta property="og:url" content="https://complexprint.ru/remont-printerov-konica-minolta" />
+        <meta name="robots" content="index, follow" />
+        <link rel="alternate" hrefLang="ru" href="https://complexprint.ru/remont-printerov-konica-minolta" />
+        <script type="application/ld+json">
+          {JSON.stringify(brandSchema)}
+        </script>
       </Helmet>
 
       <Header />
 
       <main className="min-h-screen bg-gradient-to-br from-gray-50 to-white pt-24 pb-16">
-        <div className="container mx-auto px-4 max-w-5xl">
+        <article className="container mx-auto px-4 max-w-5xl">
           
+          <Breadcrumbs items={[
+            { name: 'Услуги', url: '/#services' },
+            { name: 'Ремонт принтеров Konica Minolta' }
+          ]} />
+
           {/* Hero Image */}
-          <div className="mb-8 rounded-2xl overflow-hidden shadow-xl">
+          <header className="mb-8 rounded-2xl overflow-hidden shadow-xl">
             <img 
               src="/images/bizhub_master.jpg"
-              alt="Мастер ComplexPrint ремонтирует принтер Konica Minolta"
+              alt="Мастер ComplexPrint ремонтирует МФУ Konica Minolta bizhub с оригинальными запчастями"
               className="w-full h-[400px] object-cover"
             />
           </div>
