@@ -43,13 +43,13 @@ export default function HpRepair() {
           ]} />
           
           {/* Hero Image */}
-          <div className="mb-8 rounded-2xl overflow-hidden shadow-xl">
+          <header className="mb-8 rounded-2xl overflow-hidden shadow-xl">
             <img 
               src="/images/hp_master.jpg"
-              alt="Мастер ComplexPrint ремонтирует принтер HP"
+              alt="Мастер ComplexPrint ремонтирует принтер HP LaserJet с оригинальными запчастями"
               className="w-full h-[400px] object-cover"
             />
-          </div>
+          </header>
 
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             Ремонт принтеров HP в Москве с выездом
