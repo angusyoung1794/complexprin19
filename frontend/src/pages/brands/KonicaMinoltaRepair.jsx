@@ -71,7 +71,7 @@ export default function KonicaMinoltaRepair() {
               alt="Мастер ComplexPrint ремонтирует МФУ Konica Minolta bizhub с оригинальными запчастями"
               className="w-full h-[400px] object-cover"
             />
-          </div>
+          </header>
 
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
             Ремонт принтеров и МФУ Konica Minolta в Москве
