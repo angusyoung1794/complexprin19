@@ -117,7 +117,7 @@ export default function XeroxRepair() {
               </a>
             </div>
           </section>
-        </div>
+        </article>
       </main>
 
       <Footer />
