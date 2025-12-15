@@ -71,7 +71,7 @@ const Header = () => {
             </div>
             <div>
               <h1 className="text-xl font-bold text-gray-900">Комплекс Принт</h1>
-              <p className="text-xs text-gray-500 hidden sm:block">Профессиональное обслуживание оборудования</p>
+              <p className="text-xs text-gray-500 hidden xl:block">Профессиональное обслуживание оборудования</p>
             </div>
           </div>
 
