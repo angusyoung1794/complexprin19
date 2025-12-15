@@ -76,7 +76,7 @@ const Header = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-6">
+          <nav className="hidden lg:flex items-center space-x-4 xl:space-x-6">
             <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium whitespace-nowrap">Главная</button>
             <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium whitespace-nowrap">Услуги</button>
             <button onClick={() => scrollToSection('equipment')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium whitespace-nowrap">Оборудование</button>
