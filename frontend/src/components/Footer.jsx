@@ -65,8 +65,14 @@ const Footer = () => {
               <button onClick={() => scrollToSection('equipment')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left">Оборудование</button>
               <button onClick={() => go('/about-us')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left">О нас</button>
               <button onClick={() => go('/ceny')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left">Цены</button>
-              <button onClick={() => go('/faq')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left">FAQ</button>
-              <button onClick={() => go('/print-defects-guide')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left">Справочник дефектов</button>
+              
+              {/* Группа "Справочники" */}
+              <div className="pt-2">
+                <div className="text-sm font-medium text-gray-400 mb-1">Справочники</div>
+                <button onClick={() => go('/faq')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left pl-3">FAQ</button>
+                <button onClick={() => go('/print-defects-guide')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left pl-3">Справочник дефектов</button>
+              </div>
+              
               <button onClick={() => scrollToSection('repair-request')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left">Заявка на ремонт</button>
               <a href="https://t.me/complexprint_mos" target="_blank" rel="noopener noreferrer" className="block text-gray-300 hover:text-pink-400 transition-colors duration-200">
                 Контакты (Telegram)
