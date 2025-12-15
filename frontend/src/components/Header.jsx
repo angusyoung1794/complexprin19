@@ -82,8 +82,29 @@ const Header = () => {
             <button onClick={() => scrollToSection('equipment')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">Оборудование</button>
             <button onClick={() => navigate('/about-us')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">О нас</button>
             <button onClick={() => navigate('/ceny')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">Цены</button>
-            <button onClick={() => navigate('/faq')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">FAQ</button>
-            <button onClick={() => navigate('/print-defects-guide')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">Справочник дефектов</button>
+            
+            {/* Выпадающее меню "Справочники" */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className="flex items-center space-x-1 text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium focus:outline-none">
+                <span>Справочники</span>
+                <ChevronDown size={16} />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="bg-white shadow-lg">
+                <DropdownMenuItem 
+                  onClick={() => { navigate('/faq'); }}
+                  className="cursor-pointer hover:bg-pink-50 hover:text-pink-600"
+                >
+                  FAQ
+                </DropdownMenuItem>
+                <DropdownMenuItem 
+                  onClick={() => { navigate('/print-defects-guide'); }}
+                  className="cursor-pointer hover:bg-pink-50 hover:text-pink-600"
+                >
+                  Справочник дефектов
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+            
             {/* Контакты ведет в Telegram */}
             <button onClick={openTelegram} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium">Контакты</button>
           </nav>
