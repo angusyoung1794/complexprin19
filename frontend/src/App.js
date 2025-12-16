@@ -26,6 +26,7 @@ import Districts from "./pages/Districts";
 import AboutUs from "./pages/AboutUs";
 import ScrollToTop from "./components/ScrollToTop";
 import FAQ from "./pages/FAQ";
+import CookieConsent from "./components/CookieConsent";
 import { 
   getOrganizationSchema, 
   getWebSiteSchema,
