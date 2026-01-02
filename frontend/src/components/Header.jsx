@@ -92,13 +92,13 @@ const Header = () => {
               <DropdownMenuContent className="bg-white shadow-lg">
                 <DropdownMenuItem 
                   onClick={() => { navigate('/faq'); }}
-                  className="cursor-pointer hover:bg-pink-50 hover:text-pink-600"
+                  className="cursor-pointer font-montserrat font-semibold text-purple-900 hover:bg-pink-50 hover:text-pink-600"
                 >
                   FAQ
                 </DropdownMenuItem>
                 <DropdownMenuItem 
                   onClick={() => { navigate('/print-defects-guide'); }}
-                  className="cursor-pointer hover:bg-pink-50 hover:text-pink-600"
+                  className="cursor-pointer font-montserrat font-semibold text-purple-900 hover:bg-pink-50 hover:text-pink-600"
                 >
                   Справочник дефектов
                 </DropdownMenuItem>
