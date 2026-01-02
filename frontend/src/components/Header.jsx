@@ -67,7 +67,7 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-2 cursor-pointer" onClick={goHome}>
             <div className="w-10 h-10 bg-gradient-to-br from-pink-500 to-purple-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">PC</span>
+              <span className="text-white font-bold text-lg">CP</span>
             </div>
             <div>
               <h1 className="text-xl font-bold text-gray-900">Комплекс Принт</h1>
@@ -77,15 +77,15 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-4 xl:space-x-6">
-            <button onClick={() => scrollToSection('home')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium whitespace-nowrap">Главная</button>
-            <button onClick={() => scrollToSection('services')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium whitespace-nowrap">Услуги</button>
-            <button onClick={() => scrollToSection('equipment')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium whitespace-nowrap">Оборудование</button>
-            <button onClick={() => navigate('/about-us')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium whitespace-nowrap">О нас</button>
-            <button onClick={() => navigate('/ceny')} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium whitespace-nowrap">Цены</button>
+            <button onClick={() => scrollToSection('home')} className="font-montserrat font-bold text-purple-900 hover:text-pink-600 transition-colors duration-200 whitespace-nowrap">Главная</button>
+            <button onClick={() => scrollToSection('services')} className="font-montserrat font-bold text-purple-900 hover:text-pink-600 transition-colors duration-200 whitespace-nowrap">Услуги</button>
+            <button onClick={() => scrollToSection('equipment')} className="font-montserrat font-bold text-purple-900 hover:text-pink-600 transition-colors duration-200 whitespace-nowrap">Оборудование</button>
+            <button onClick={() => navigate('/about-us')} className="font-montserrat font-bold text-purple-900 hover:text-pink-600 transition-colors duration-200 whitespace-nowrap">О нас</button>
+            <button onClick={() => navigate('/ceny')} className="font-montserrat font-bold text-purple-900 hover:text-pink-600 transition-colors duration-200 whitespace-nowrap">Цены</button>
             
             {/* Выпадающее меню "Справочники" */}
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center space-x-1 text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium focus:outline-none whitespace-nowrap">
+              <DropdownMenuTrigger className="flex items-center space-x-1 font-montserrat font-bold text-purple-900 hover:text-pink-600 transition-colors duration-200 focus:outline-none whitespace-nowrap">
                 <span>Справочники</span>
                 <ChevronDown size={16} />
               </DropdownMenuTrigger>
@@ -106,7 +106,7 @@ const Header = () => {
             </DropdownMenu>
             
             {/* Контакты ведет в Telegram */}
-            <button onClick={openTelegram} className="text-gray-700 hover:text-pink-600 transition-colors duration-200 font-medium whitespace-nowrap">Контакты</button>
+            <button onClick={openTelegram} className="font-montserrat font-bold text-purple-900 hover:text-pink-600 transition-colors duration-200 whitespace-nowrap">Контакты</button>
           </nav>
 
           {/* Contact Info */}
