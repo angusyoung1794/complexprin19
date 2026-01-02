@@ -133,18 +133,18 @@ const Header = () => {
         {isMenuOpen && (
           <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t">
             <nav className="flex flex-col py-4">
-              <button onClick={() => scrollToSection('home')} className="px-4 py-3 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">Главная</button>
-              <button onClick={() => scrollToSection('services')} className="px-4 py-3 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">Услуги</button>
-              <button onClick={() => scrollToSection('equipment')} className="px-4 py-3 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">Оборудование</button>
-              <button onClick={() => { navigate('/about-us'); setIsMenuOpen(false); }} className="px-4 py-3 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">О нас</button>
-              <button onClick={() => { navigate('/ceny'); setIsMenuOpen(false); }} className="px-4 py-3 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">Цены</button>
+              <button onClick={() => scrollToSection('home')} className="px-4 py-3 text-left font-montserrat font-bold text-purple-900 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">Главная</button>
+              <button onClick={() => scrollToSection('services')} className="px-4 py-3 text-left font-montserrat font-bold text-purple-900 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">Услуги</button>
+              <button onClick={() => scrollToSection('equipment')} className="px-4 py-3 text-left font-montserrat font-bold text-purple-900 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">Оборудование</button>
+              <button onClick={() => { navigate('/about-us'); setIsMenuOpen(false); }} className="px-4 py-3 text-left font-montserrat font-bold text-purple-900 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">О нас</button>
+              <button onClick={() => { navigate('/ceny'); setIsMenuOpen(false); }} className="px-4 py-3 text-left font-montserrat font-bold text-purple-900 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">Цены</button>
               
               {/* Группа "Справочники" в мобильном меню */}
               <div className="px-4 py-2 text-xs font-semibold text-gray-500 uppercase">Справочники</div>
-              <button onClick={() => { navigate('/faq'); setIsMenuOpen(false); }} className="px-6 py-3 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">FAQ</button>
-              <button onClick={() => { navigate('/print-defects-guide'); setIsMenuOpen(false); }} className="px-6 py-3 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">Справочник дефектов</button>
+              <button onClick={() => { navigate('/faq'); setIsMenuOpen(false); }} className="px-6 py-3 text-left font-montserrat font-bold text-purple-900 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">FAQ</button>
+              <button onClick={() => { navigate('/print-defects-guide'); setIsMenuOpen(false); }} className="px-6 py-3 text-left font-montserrat font-bold text-purple-900 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">Справочник дефектов</button>
               
-              <button onClick={openTelegram} className="px-4 py-3 text-left text-gray-700 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">Контакты</button>
+              <button onClick={openTelegram} className="px-4 py-3 text-left font-montserrat font-bold text-purple-900 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">Контакты</button>
               <div className="px-4 py-3 border-t">
                 <div className="flex items-center space-x-2 text-sm text-gray-600 mb-3">
                   <Phone size={16} className="text-pink-500" />
