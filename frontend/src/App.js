@@ -96,6 +96,7 @@ const Home = () => {
         <ServicesSection />
         <EquipmentSection />
         <AboutSection />
+        <TestimonialsSection />
         <RepairRequestForm />
       </main>
       <Footer />
