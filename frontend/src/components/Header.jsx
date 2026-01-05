@@ -137,6 +137,7 @@ const Header = () => {
               <button onClick={() => scrollToSection('home')} className="px-4 py-3 text-left font-montserrat font-bold text-purple-900 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">Главная</button>
               <button onClick={() => scrollToSection('services')} className="px-4 py-3 text-left font-montserrat font-bold text-purple-900 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">Услуги</button>
               <button onClick={() => scrollToSection('equipment')} className="px-4 py-3 text-left font-montserrat font-bold text-purple-900 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">Оборудование</button>
+              <button onClick={() => scrollToSection('reviews')} className="px-4 py-3 text-left font-montserrat font-bold text-purple-900 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">Отзывы</button>
               <button onClick={() => { navigate('/about-us'); setIsMenuOpen(false); }} className="px-4 py-3 text-left font-montserrat font-bold text-purple-900 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">О нас</button>
               <button onClick={() => { navigate('/ceny'); setIsMenuOpen(false); }} className="px-4 py-3 text-left font-montserrat font-bold text-purple-900 hover:bg-pink-50 hover:text-pink-600 transition-colors duration-200">Цены</button>
               
