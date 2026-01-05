@@ -63,6 +63,7 @@ const Footer = () => {
               <button onClick={() => scrollToSection('home')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left">Главная</button>
               <button onClick={() => scrollToSection('services')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left">Услуги</button>
               <button onClick={() => scrollToSection('equipment')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left">Оборудование</button>
+              <button onClick={() => scrollToSection('reviews')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left">Отзывы</button>
               <button onClick={() => go('/about-us')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left">О нас</button>
               <button onClick={() => go('/ceny')} className="block text-gray-300 hover:text-pink-400 transition-colors duration-200 text-left">Цены</button>
               
