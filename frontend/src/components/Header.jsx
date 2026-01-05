@@ -80,6 +80,7 @@ const Header = () => {
             <button onClick={() => scrollToSection('home')} className="font-montserrat font-bold text-purple-900 hover:text-pink-600 transition-colors duration-200 whitespace-nowrap">Главная</button>
             <button onClick={() => scrollToSection('services')} className="font-montserrat font-bold text-purple-900 hover:text-pink-600 transition-colors duration-200 whitespace-nowrap">Услуги</button>
             <button onClick={() => scrollToSection('equipment')} className="font-montserrat font-bold text-purple-900 hover:text-pink-600 transition-colors duration-200 whitespace-nowrap">Оборудование</button>
+            <button onClick={() => scrollToSection('reviews')} className="font-montserrat font-bold text-purple-900 hover:text-pink-600 transition-colors duration-200 whitespace-nowrap">Отзывы</button>
             <button onClick={() => navigate('/about-us')} className="font-montserrat font-bold text-purple-900 hover:text-pink-600 transition-colors duration-200 whitespace-nowrap">О нас</button>
             <button onClick={() => navigate('/ceny')} className="font-montserrat font-bold text-purple-900 hover:text-pink-600 transition-colors duration-200 whitespace-nowrap">Цены</button>
             
