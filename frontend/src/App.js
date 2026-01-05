@@ -8,6 +8,7 @@ import EquipmentSection from "./components/EquipmentSection";
 import AboutSection from "./components/AboutSection";
 import RepairRequestForm from "./components/RepairRequestForm";
 import Footer from "./components/Footer";
+import TestimonialsSection from "./components/TestimonialsSection";
 import UserAgreement from "./pages/UserAgreement";
 import PrinterSelection from "./pages/PrinterSelection";
 import PrinterErrorGuide from "./pages/PrinterErrorGuide";
